@@ -1,0 +1,28 @@
+{
+  "name": "tutorial",
+  "version": "1.0.0",
+  "description": "Tutorial jsladies",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JsLadiesBR/tutorial.git"
+  },
+  "keywords": [
+    "jsladies",
+    "tutorial",
+    "hantaro",
+    "javascript"
+  ],
+  "author": "Raysa Dutra e Ju Dantas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JsLadiesBR/tutorial/issues"
+  },
+  "homepage": "https://github.com/JsLadiesBR/tutorial#readme",
+  "dependencies": {
+    "generator-phaserjs": "^0.1.3"
+  }
+}
