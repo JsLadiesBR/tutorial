@@ -4,7 +4,8 @@
   "description": "Tutorial jsladies",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "httpserver --port 8000"
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,8 @@
   "homepage": "https://github.com/JsLadiesBR/tutorial#readme",
   "dependencies": {
     "generator-phaserjs": "^0.1.3"
+  },
+  "devDependencies": {
+    "httpserver": "^0.3.0"
   }
 }
