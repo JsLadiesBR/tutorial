@@ -1,0 +1,17 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    border: 2px dashed #000;
+    height: 600px;
+    background: #efefef;
+}
+
+canvas {
+    height: 600px;
+    width: 100%;
+}
