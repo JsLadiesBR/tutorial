@@ -9,6 +9,7 @@ html, body {
     border: 2px dashed #000;
     height: 600px;
     background: #efefef;
+    box-sizing: border-box;
 }
 
 canvas {
