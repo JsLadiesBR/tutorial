@@ -2,23 +2,25 @@ var Hamtaro = new Phaser.Class({
 
     initialize:
 
-    function Hamtaro (game, x, y)
+    function Hamtaro (game, x, y, name)
     {
         // crio um sprite de acordo com o atlas que abri no preload
         this.hamtaro = adicionarSprite(game, { 
             x: x,
             y: y,
-            nome: 'hamtaro',
-            mapname: 'hamtaro1'
+            nome: name,
+            mapname: name
         })
 
-        console.log(this.hamtaro.anims)
-
-        var config = {
-            key: 'esquerda',
-            frames: this.hamtaro.anims.animationManager.generateFrameNumbers('sprite', { frames: [41,42,43] }),
-            framerate: 3,
-        }
+        game.anims.create({ 
+            key: 'esquerda', 
+            frames: game.anims.generateFrameNames('hamtaro', { 
+                prefix: 'sprite', 
+                end: 43, 
+                start: 41
+            }),
+            repeat: -1 
+        });
 
         this.velocidade = 1
         this.tempoMovimento = 0
@@ -33,7 +35,7 @@ var Hamtaro = new Phaser.Class({
     },
 
     esquerda: function () {
-        this.hamtaro.anims.animationManager.play('esquerda')
+        this.hamtaro.play('esquerda')
         // this.hamtaro.anims.animationManager.play('esquerda')
         this.direcao = 'ESQUERDA'
     },

@@ -1,15 +1,7 @@
 
 // funcao de carregar as imagens e outros recursos
 var preload = function () {
-
     this.load.atlas('hamtaro', 'assets/sprites/hamtaro/hamham.png', 'assets/sprites/maps/hamham2.json')
-
-    // abrirAtlas(this, {
-    //     nome: 'hamtaro',
-    //     url: 'assets/sprites/hamtaro/hamham.png',
-    //     urlmap: 'assets/sprites/maps/hamham.json'
-    // })
-
 }
 
 // funcao para criar o jogo
@@ -17,24 +9,68 @@ var create = function () {
 
 
     this.anims.create({ 
-        key: 'diamond', 
+        key: 'direita', 
         frames: this.anims.generateFrameNames('hamtaro', { 
             prefix: 'sprite', 
             end: 43, 
-            zeroPad: 41 
+            start: 41
         }),
-        repeat: -1 
+        repeat: -1,
+        duration: 300
     });
 
-    this.add.sprite(400, 100, 'hamtaro').play('diamond');
+    this.anims.create({ 
+        key: 'esquerda', 
+        frames: this.anims.generateFrameNames('hamtaro', { 
+            prefix: 'sprite', 
+            end: 40, 
+            start: 38
+        }),
+        repeat: -1,
+        duration: 300
+    });
 
-    // Configurar os controles
+    this.anims.create({ 
+        key: 'cima', 
+        frames: this.anims.generateFrameNames('hamtaro', { 
+            prefix: 'sprite', 
+            end: 31, 
+            start: 30
+        }),
+        repeat: -1,
+        duration: 300
+    });
+
+    this.anims.create({ 
+        key: 'baixo', 
+        frames: this.anims.generateFrameNames('hamtaro', { 
+            prefix: 'sprite', 
+            end: 35, 
+            start: 34
+        }),
+        repeat: -1,
+        duration: 300
+    });
+
+    hamtaro = this.add.sprite(400, 100, 'hamtaro')
+
     cursors = configurarTeclado(this)
-
 }
 
 
-var update = function (time, delta) { }
+var update = function (time, delta) {
+
+    if (cursors.left.isDown) {
+        hamtaro.play('esquerda')
+    } else if (cursors.right.isDown) {
+        hamtaro.play('direita')
+    } else if (cursors.up.isDown) {
+        hamtaro.play('cima')
+    } else if (cursors.down.isDown) {
+        hamtaro.play('baixo')
+    }
+
+}
 
 
 
