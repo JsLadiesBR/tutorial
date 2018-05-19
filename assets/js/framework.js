@@ -91,7 +91,7 @@ function adicionarAnimacao(escopo, nome) {
 }
 
 /* 
-    Descrição do metodo:
+    Descrição do método:
     Uma vez que um sprite tem uma animação ela pode ser ativada passando pelos parametros
     o sprite q se deseja animar, o nome da animacao e o parametro que determina se existe loop ou nao
     
@@ -106,7 +106,7 @@ function animarSprite(sprite, nome, loop) {
 }
 
 /* 
-    Descrição do metodo:
+    Descrição do método:
     Para posicionar na tela um sprite que foi criado apartir de um atlas, é necessário escolher um frame
     especifico do atlas (Para escolher esse frame, procure pela propriedade filename do seu JSON de atlas)
     alem disso, escolha a posicão x e y para posicionar a imagem, e largura e altura são opcionais.
@@ -127,3 +127,20 @@ function adicionarTileSprite(escopo, c) {
 }
 
 
+/*
+    Descrição do método:
+    Esse método funciona para trazer as configurações do teclado
+    @params
+        escopo: tipo Game
+*/
+function configurarTeclado (escopo) {
+    return escopo.input.keyboard.createCursorKeys()
+}
+
+/*
+    Descrição do método
+
+*/
+function adicionarFrame(nomeFrame, inicio, fim) {
+    return Phaser.Animation.generateFrameNames(nomeFrame, inicio, fim)
+}

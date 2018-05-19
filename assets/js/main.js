@@ -2,35 +2,41 @@
 // funcao de carregar as imagens e outros recursos
 var preload = function () {
 
-    abrirAtlas(this, {
-        nome: 'hamtaro',
-        url: 'assets/sprites/hamtaro/hamtaro.png',
-        urlmap: 'assets/sprites/maps/hamtaro.json'
-    })
+    this.load.atlas('hamtaro', 'assets/sprites/hamtaro/hamham.png', 'assets/sprites/maps/hamham2.json')
+
+    // abrirAtlas(this, {
+    //     nome: 'hamtaro',
+    //     url: 'assets/sprites/hamtaro/hamham.png',
+    //     urlmap: 'assets/sprites/maps/hamham.json'
+    // })
 
 }
 
-var hamtaro
 // funcao para criar o jogo
 var create = function () {
 
-    // crio um sprite de acordo com o atlas que abri no preload
-    hamtaro = adicionarSprite(this, { 
-        x: 50,
-        y: 50,
-        nome: 'hamtaro',
-        mapname: 'hamtaro1'
-    })
 
-    // posiciono o sprite em um local da tela
-    hamtaro = adicionarTileSprite(this, {
-        x: 10,
-        y: 15,
-        name: 'hamtaro',
-        frame: 'hamtaro1'
-    })
+    this.anims.create({ 
+        key: 'diamond', 
+        frames: this.anims.generateFrameNames('hamtaro', { 
+            prefix: 'sprite', 
+            end: 43, 
+            zeroPad: 41 
+        }),
+        repeat: -1 
+    });
+
+    this.add.sprite(400, 100, 'hamtaro').play('diamond');
+
+    // Configurar os controles
+    cursors = configurarTeclado(this)
 
 }
+
+
+var update = function (time, delta) { }
+
+
 
 // Lista da rotina principal do jogo
 var principal = function () {
@@ -43,7 +49,10 @@ var principal = function () {
     var game = criarJogo({
         type: Phaser.AUTO,
         width: largura,
+        parent: 'phaser-example',
+        pixelArt: true,
         height: altura,
+        backgroundColor: '#b3e6ff',
         physics: {
             default: 'arcade',
             arcade: {
@@ -52,7 +61,8 @@ var principal = function () {
         },
         scene: {
             preload: preload,
-            create: create
+            create: create,
+            update: update
         }
     })
 
