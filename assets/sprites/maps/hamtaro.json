@@ -1,93 +1,254 @@
 {
-	"frames": [{
-		"filename": "hamtaro1",
-		"frame": {
-			"x": 9,
-			"y": 14,
-			"w": 31,
-			"h": 32
-		},
-		"rotated": false,
-		"trimmed": false,
-		"spriteSourceSize": {
-			"x": 0,
-			"y": 0,
-			"w": 31,
-			"h": 32
-		},
-		"sourceSize": {
-			"w": 31,
-			"h": 32
-		}
-	}, {
-		"filename": "hamtaro2",
-		"frame": {
-			"x": 53,
-			"y": 14,
-			"w": 31,
-			"h": 33
-		},
-		"rotated": false,
-		"trimmed": false,
-		"spriteSourceSize": {
-			"x": 0,
-			"y": 0,
-			"w": 31,
-			"h": 33
-		},
-		"sourceSize": {
-			"w": 31,
-			"h": 33
-		}
-	}, {
-		"filename": "hamtaro3",
-		"frame": {
-			"x": 96,
-			"y": 15,
-			"w": 31,
-			"h": 32
-		},
-		"rotated": false,
-		"trimmed": false,
-		"spriteSourceSize": {
-			"x": 0,
-			"y": 0,
-			"w": 31,
-			"h": 32
-		},
-		"sourceSize": {
-			"w": 31,
-			"h": 32
-		}
-	}, {
-		"filename": "hamtaro4",
-		"frame": {
-			"x": 139,
-			"y": 16,
-			"w": 31,
-			"h": 33
-		},
-		"rotated": false,
-		"trimmed": false,
-		"spriteSourceSize": {
-			"x": 0,
-			"y": 0,
-			"w": 31,
-			"h": 33
-		},
-		"sourceSize": {
-			"w": 31,
-			"h": 33
-		}
-	}],
-	"meta": {
-		"app": "https://www.leshylabs.com/apps/sstool/",
-		"version": "Leshy SpriteSheet Tool v0.8.4",
-		"image": "spritesheet.png",
-		"size": {
-			"w": 183,
-			"h": 57
-		},
-		"scale": 1
-	}
-}
+    "frames":{
+        "hamtaro_1":{
+            "frame":{
+               "x":259,
+               "y":98,
+               "w":38,
+               "h":29
+            },
+            "rotated":false,
+            "trimmed":false,
+            "spriteSourceSize":{
+               "x":0,
+               "y":0,
+               "w":38,
+               "h":29
+            },
+            "sourceSize":{
+               "w":38,
+               "h":29
+            }
+        },
+        "hamtaro_2":{
+            "frame":{
+               "x":303,
+               "y":98,
+               "w":36,
+               "h":29
+            },
+            "rotated":false,
+            "trimmed":false,
+            "spriteSourceSize":{
+               "x":0,
+               "y":0,
+               "w":36,
+               "h":29
+            },
+            "sourceSize":{
+               "w":36,
+               "h":29
+            }
+        },
+        "hamtaro_3":{
+            "frame":{
+               "x":384,
+               "y":98,
+               "w":37,
+               "h":29
+            },
+            "rotated":false,
+            "trimmed":false,
+            "spriteSourceSize":{
+               "x":0,
+               "y":0,
+               "w":37,
+               "h":29
+            },
+            "sourceSize":{
+               "w":37,
+               "h":29
+            }
+        },
+        "hamtaro_4":{
+            "frame":{
+               "x":90,
+               "y":98,
+               "w":38,
+               "h":29
+            },
+            "rotated":false,
+            "trimmed":false,
+            "spriteSourceSize":{
+               "x":0,
+               "y":0,
+               "w":38,
+               "h":29
+            },
+            "sourceSize":{
+               "w":38,
+               "h":29
+            }
+        },
+        "hamtaro_5":{
+            "frame":{
+               "x":134,
+               "y":98,
+               "w":36,
+               "h":29
+            },
+            "rotated":false,
+            "trimmed":false,
+            "spriteSourceSize":{
+               "x":0,
+               "y":0,
+               "w":36,
+               "h":29
+            },
+            "sourceSize":{
+               "w":36,
+               "h":29
+            }
+        },
+        "hamtaro_6":{
+            "frame":{
+               "x":217,
+               "y":98,
+               "w":37,
+               "h":29
+            },
+            "rotated":false,
+            "trimmed":false,
+            "spriteSourceSize":{
+               "x":0,
+               "y":0,
+               "w":37,
+               "h":29
+            },
+            "sourceSize":{
+               "w":37,
+               "h":29
+            }
+        },
+        "hamtaro_7":{
+            "frame":{
+               "x":573,
+               "y":98,
+               "w":27,
+               "h":29
+            },
+            "rotated":false,
+            "trimmed":false,
+            "spriteSourceSize":{
+               "x":0,
+               "y":0,
+               "w":27,
+               "h":29
+            },
+            "sourceSize":{
+               "w":27,
+               "h":29
+            }
+        },
+        "hamtaro_8":{
+            "frame":{
+               "x":605,
+               "y":103,
+               "w":29,
+               "h":24
+            },
+            "rotated":false,
+            "trimmed":false,
+            "spriteSourceSize":{
+               "x":0,
+               "y":0,
+               "w":29,
+               "h":24
+            },
+            "sourceSize":{
+               "w":29,
+               "h":24
+            }
+        },
+        "hamtaro_9":{
+            "frame":{
+               "x":427,
+               "y":95,
+               "w":31,
+               "h":32
+            },
+            "rotated":false,
+            "trimmed":false,
+            "spriteSourceSize":{
+               "x":0,
+               "y":0,
+               "w":31,
+               "h":32
+            },
+            "sourceSize":{
+               "w":31,
+               "h":32
+            }
+        },
+        "hamtaro_10":{
+            "frame":{
+               "x":464,
+               "y":96,
+               "w":31,
+               "h":31
+            },
+            "rotated":false,
+            "trimmed":false,
+            "spriteSourceSize":{
+               "x":0,
+               "y":0,
+               "w":31,
+               "h":31
+            },
+            "sourceSize":{
+               "w":31,
+               "h":31
+            }
+        },
+        "hamtaro_11":{
+            "frame":{
+               "x":9,
+               "y":10,
+               "w":31,
+               "h":32
+            },
+            "rotated":false,
+            "trimmed":false,
+            "spriteSourceSize":{
+               "x":0,
+               "y":0,
+               "w":31,
+               "h":32
+            },
+            "sourceSize":{
+               "w":31,
+               "h":32
+            }
+        },
+        "hamtaro_12":{
+            "frame":{
+               "x":9,
+               "y":10,
+               "w":31,
+               "h":32
+            },
+            "rotated":false,
+            "trimmed":false,
+            "spriteSourceSize":{
+               "x":0,
+               "y":0,
+               "w":31,
+               "h":32
+            },
+            "sourceSize":{
+               "w":31,
+               "h":32
+            }
+        }
+    },
+    "meta":{
+       "app":"https://www.leshylabs.com/apps/sstool/",
+       "version":"Leshy SpriteSheet Tool v0.8.4",
+       "image":"spritesheet.png",
+       "size":{
+          "w":640,
+          "h":1530
+       },
+       "scale":1
+    }
+ }
