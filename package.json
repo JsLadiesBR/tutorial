@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "httpserver --port 8000"
+    "dev": "httpserver --port 8000",
+    "deploy": "surge"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
     "phaser": "^3.8.0"
   },
   "devDependencies": {
-    "httpserver": "^0.3.0"
+    "httpserver": "^0.3.0",
+    "surge": "^0.20.1"
   }
 }
