@@ -17,6 +17,27 @@ const preload = function () {
 // funcao para criar o jogo
 const create = function () {
 
+    self = this
+    this.hamtaro
+    this.otherPlayers = this.physics.add.group()
+    this.socket = io('http://localhost:8081')
+    
+    this.socket.on('currentPlayers', players => {
+        currentPlayers(self, players)
+    })
+    
+    this.socket.on('newPlayer', player => {
+        addOtherPlayers(self, player)
+    })
+
+    this.socket.on('disconnect', playerId => {
+        disconnect(self, playerId)
+    })
+
+    this.socket.on('playerMoved', function (playerInfo) {
+        playerMoved(self, playerInfo)
+    });
+
     // Variavel para guardar a pontuação
     this.score = 0;
 
@@ -98,7 +119,7 @@ const create = function () {
     let y = randomNumber(50, window.innerHeight - 50)
 
     // Cria um hamtaro que será controlado pela participante
-    hamtaro = this.physics.add.sprite(150, 150, 'hamtaro_atlas')
+    // hamtaro = this.physics.add.sprite(150, 150, 'hamtaro_atlas')
 
     // Cria um sprite de comida
     comida = this.physics.add.sprite(x, y, 'comida_atlas', 'sprite92')
@@ -115,31 +136,31 @@ const create = function () {
     // pera = this.add.sprite(550, 300, 'comida_atlas', 'sprite76')
 
     // Informa que o hamtaro e a comida são passíveis de colisão
-    this.physics.add.collider(hamtaro, comida)
+    // this.physics.add.collider(this.hamtaro, comida)
 
-    // Cria o evento que acontecera quando o hamtaro colidir com uma comida
-    this.physics.add.overlap(hamtaro, comida, function(){
+    // // Cria o evento que acontecera quando o hamtaro colidir com uma comida
+    // this.physics.add.overlap(this.hamtaro, comida, function(){
         
-        // Adiciona pontuação ao score
-        this.score += 3
+    //     // Adiciona pontuação ao score
+    //     this.score += 3
         
-        // Adiciona a informação ao texto da tela
-        pontuacao.setText(`SCORE: ${this.score}`)
+    //     // Adiciona a informação ao texto da tela
+    //     pontuacao.setText(`SCORE: ${this.score}`)
         
-        // Escolhe randomicamente a nova posicao da comida
-        comida.x = randomNumber(50, window.innerWidth - 50)
-        comida.y = randomNumber(50, window.innerHeight - 50)
+    //     // Escolhe randomicamente a nova posicao da comida
+    //     comida.x = randomNumber(50, window.innerWidth - 50)
+    //     comida.y = randomNumber(50, window.innerHeight - 50)
         
-        // Cada numero indica uma imagem para uma comida diferente
-        let number = [92, 88, 87, 86, 85, 81, 78, 77, 76]
+    //     // Cada numero indica uma imagem para uma comida diferente
+    //     let number = [92, 88, 87, 86, 85, 81, 78, 77, 76]
         
-        // Escolhe um numero da lista acima 
-        number = random(number)
+    //     // Escolhe um numero da lista acima 
+    //     number = random(number)
         
-        // Troca a imagem da comida de acordo com o numero escolhido
-        comida.setTexture('comida_atlas', `sprite${number}`)
+    //     // Troca a imagem da comida de acordo com o numero escolhido
+    //     comida.setTexture('comida_atlas', `sprite${number}`)
 
-    }, null, this);
+    // }, null, this);
 
     // Captura todas as teclas do teclado
     cursors = this.input.keyboard.createCursorKeys()
@@ -149,25 +170,42 @@ const create = function () {
 // funcao para atualizar o jogo
 const update = function () {
 
-    // Controle pelas setas esquerda direita cima e baixo do teclado
-    if (cursors.left.isDown) {
-        // movimenta o hamtaro em relacao ao eixo x
-        hamtaro.x -= 3
-        // anima o sprite com uma animacao escolhida
-        hamtaro.anims.play('esquerda', true)
-    } else if (cursors.right.isDown) {
-        hamtaro.x += 3
-        hamtaro.anims.play('direita', true)
-    } else if (cursors.up.isDown) {
-        hamtaro.y -= 2
-        hamtaro.anims.play('cima', true)
-    } else if (cursors.down.isDown) {
-        hamtaro.y += 2
-        hamtaro.anims.play('baixo', true)
-    } else {
-        hamtaro.anims.play('normal')
-    }
+    if (this.hamtaro) {
+        // Controle pelas setas esquerda direita cima e baixo do teclado
+        if (cursors.left.isDown) {
+            // movimenta o hamtaro em relacao ao eixo x
+            this.hamtaro.x -= 3
+            // anima o sprite com uma animacao escolhida
+            this.hamtaro.anims.play('esquerda', true)
+        } else if (cursors.right.isDown) {
+            this.hamtaro.x += 3
+            this.hamtaro.anims.play('direita', true)
+        } else if (cursors.up.isDown) {
+            this.hamtaro.y -= 2
+            this.hamtaro.anims.play('cima', true)
+        } else if (cursors.down.isDown) {
+            this.hamtaro.y += 2
+            this.hamtaro.anims.play('baixo', true)
+        } else {
+            this.hamtaro.anims.play('normal')
+        }
 
+        // emit player movement
+        var x = this.hamtaro.x
+        var y = this.hamtaro.y
+    
+        if (this.hamtaro.oldPosition && (x !== this.hamtaro.oldPosition.x || y !== this.hamtaro.oldPosition.y )) {
+            this.socket.emit('playerMovement', { x: this.hamtaro.x, y: this.hamtaro.y })
+        }
+        
+        // save old position data
+        this.hamtaro.oldPosition = {
+            x: this.hamtaro.x,
+            y: this.hamtaro.y
+        };
+
+        this.physics.world.wrap(this.hamtaro, 5);
+    }
 }
 
 // Lista da rotina principal do jogo
@@ -198,7 +236,7 @@ const principal = function () {
         }
     }
 
-    const game = Phaser.Game(conf)
+    const game = new Phaser.Game(conf)
 
 }
 
