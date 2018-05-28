@@ -51,3 +51,5 @@ Com o arquivo aberto no editor, vamos começar a criar a estrutura do nosso site
     </body>
 </html>
 ```
+ Cada objeto que possui "<objeto>" é uma tag. O html não é uma linguagem de programação ele é uma linguagem de marcação de texto, e utilizamos as tags para avisar qual é o elemento que o nosso navegador deve redenrizar.
+    
