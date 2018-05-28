@@ -34,11 +34,38 @@ String é uma sequencia de caracteres, você pode criar sua primeira string da s
 
 Uma string será sempre iniciada com aspas duplas ou simples `"` ou `'`
 
+Você também pode saber o tamanho de uma string dessa forma:
+
+`> "JS Ladies!".length`
+
+`< 10`
+
+O tamanho da string condiz com a quantidade de caracteres que existe entre as aspas. O espaço em branco também é contado como caractere.
 
 
+## Variáveis! As caixinhas que guardam informações!
 
+Uma variável na programação representa um espaço na memória do computador que pode ser usado para guardar informações.
+Podemos fazer uma abstração sobre isso! Imagine que uma variável é uma caixa, nós temos diversas caixas para propositos diferentes, algumas guardam sapatos, outras guardam brinquedos e por aí vai.
+Vamos representar nossa abstração em forma de código.
 
+`> caixa1 = "sapatos"`
 
+`> caixa2 = "brinquedos"`
+
+`> caixa3 = "livros"`
+
+`> caixa4 = 3 * 4`
+
+`> caixa5 = true`
+
+Criamos 3 variáveis, cada uma está guardando um valor graças ao simbolo do `=`, que tem como função atribuir valores a uma variável.
+
+## Listas ou Arrays
+
+As listas são usadas para guardar vários valores, agrupados, geralmente com alguma afinidade. Vamos supor que você tenha uma lista de produtos que deseja comprar no mercado. Para representar essa lista de produtos no JavaScript seria assim:
+
+`> produtos = ['abacaxi', 'laranja', 'feijão', 'maionese', 'açucar']`
 
 
 
