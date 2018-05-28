@@ -163,7 +163,46 @@ Na programação a comparação é algo essencial. Então vamos começar por com
 35 != 2
 ```
 
+Colocamos dois sinais de igual `==` para comparar se os números são iguais. Como já foi visto usamos um único = para atribuir valores a variáveis. Você sempre, sempre precisará colocar `==` quando quiser verificar se os valores são iguais.
 
+Ainda temos outros operadores para comparação são eles:
+
+O maior e igual:
+```
+6 >= 12/2
+```
+
+E o menor e igual
+```
+ 3 <= 2
+```
+
+Tente esses também:
+
+```
+6 > 2 && 2 < 3
+```
+
+```
+3 > 2 && 2 < 1
+```
+
+```
+3 > 2 || 2 < 1
+```
+
+Acho que agora complicou um pouquinho, mas não se assuste! Esses novos operadores `&&` e `||` são utilizados para quando temos mais de uma comparação em nossa condição que queremos afirmar ao computador.
+
+- `&&` - É o nosso operador **and** ou **e**
+- `||` - É o nosso operador **or** ou **ou**
+
+Vamos tentar trazer isso para o nosso mundo, usamos *e* ou *ou* em nossas afirmações a todo momento, por exemplo:
+
+- o gato é preto **e** branco
+- o gato é preto **ou** branco
+
+Perceba que o sentido das frases muda de acordo com o operador que é usado.
+ 
 
 ## Referências
 
