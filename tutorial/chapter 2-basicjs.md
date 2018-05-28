@@ -63,13 +63,39 @@ Criamos 3 variáveis, cada uma está guardando um valor graças ao simbolo do `=
 
 ## Listas ou Arrays
 
-As listas são usadas para guardar vários valores, agrupados, geralmente com alguma afinidade. Vamos supor que você tenha uma lista de produtos que deseja comprar no mercado. Para representar essa lista de produtos no JavaScript seria assim:
+Para criar uma lista é tranquilo, basta fazer dessa forma:
+
+`> numeros = []`
+
+E assim teremos uma lista vazia chamada `numeros`.
+
+As listas são usadas para guardar vários valores, agrupados, geralmente com alguma afinidade ou propósito. Vamos supor que você tenha uma lista de produtos que deseja comprar no mercado. Para representar essa lista de produtos no JavaScript seria assim:
 
 `> produtos = ['abacaxi', 'laranja', 'feijão', 'maionese', 'açucar']`
 
+Podemos fazer uma série de coisas com uma lista, assim como nas strings também conseguimos ver o tamanho de uma lista
 
+`> produtos.length`
 
+O retorno desse comando será:
 
+`< 5`
+
+Também podemos ordenar de forma alfabética a nossa lista atraves desse comando:
+
+`> produtos.sort()`
+
+E o retorno será:
+
+`< ["abacaxi", "açucar", "feijão", "laranja", "maionese"]`
+
+E se quisermos ordenar ela de forma inversa, podemos usar esse comando:
+
+`> produtos.reverse()`
+
+E teremos:
+
+`< ["maionese", "laranja", "feijão", "açucar", "abacaxi"]`
 
 
 ## Referências
