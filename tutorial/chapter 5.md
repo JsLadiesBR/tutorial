@@ -245,6 +245,8 @@ Essa alteração remove a gravidade do mundo que criamos no nosso jogo.
 
 ## Dando movimento aos elementos
 
+Já temos um personagem em jogo, agora precisamos movimentar ele de alguma forma. 
+E podemos utilizar o teclado para fazer isso! O framework nos proporciona muitas facilidades e uma delas é o comando para capturar as teclas do nosso teclado. O **input.keyboard.createCursorKeys()** nos retorna as teclas direcionais.
 
 ```
 function create () {
@@ -257,6 +259,7 @@ function create () {
 }
 ```
 
+Uma vez que já temos essas teclas guardadas em uma variavel, vamos até a função de **update** para criar um comportamento no nosso personagem de acordo com a tecla que for usada. Veja:
 
 ```
 // funcao para atualizar o jogo
@@ -275,6 +278,10 @@ function update () {
 
 }
 ```
+
+- cursors.**left**, cursors.**right**, cursors.**up**, cursors.**down** são nossas teclas direcionais, respectivamente: esquerda, direita, cima e baixo.
+- cursors.left.**isDown** nos indica se a tecla foi acionada pela jogadora.
+- hamtaro.**x** e hamtaro.**y** recebem sempre um valor atualizado devido ao **+=** ou **-=** que incrementa e decrementa a posição do personagem, fazendo assim, a movimentação do nosso personagem.
 
 ## Criando animaçes
 
