@@ -132,12 +132,268 @@ Agora que ja temos o nosso jogo configurado, podemos visualizar no navegador com
 
 
 ## Importando os recursos para o jogo
+
+Como sabemos os jogos possuem vários recursos gráficos e sonoros, são esses recursos que melhoram a experiência do jogador. No nosso jogo não será diferente, dentro do diretório **assets/sprites** temos algumas imagens que vão nos acompanhar durante esse capitulo. Essas imagens são chamadas de [**sprites**](https://www.tecmundo.com.br/video-game-e-jogos/1044-o-que-sao-sprites-.htm). Agora vamos importar elas para o nosso jogo.
+
+```
+// funcao de carregar as imagens e outros recursos
+const preload = function () {
+
+    // Carrega os recursos de imagens para o jogo
+    this.load.atlas('hamtaro_atlas', 'assets/sprites/hamtaro/hamham.png', 'assets/sprites/maps/hamtaro.json')
+    this.load.atlas('comida_atlas', 'assets/sprites/assest/food.png', 'assets/sprites/maps/food.json')
+    
+}
+```
+
+Vamos apenas comparar essas linhas de código e entender o que é cada coisa que estamos escrevendo: 
+
+```
+    this.load.atlas( identificacao-do-sprite , endereco-da-imagem, endereco-do-mapeamento-json)
+    this.load.atlas('hamtaro_atlas', 'assets/sprites/hamtaro/hamham.png', 'assets/sprites/maps/hamtaro.json')
+```
+
+`OBS: A primeira linha é um exemplo, a segunda linha é o nosso recurso importado anteriormente`
+
+- A **identificacao-do-sprite** vai ser o nome que vou informar ao framework que eu quero dar a imagem que estou carregando. Escolhi como nome: **hamtaro_atlas** 
+
+- O **endereco-da-imagem** é aonde se encontra as imagens do recurso que quero usar. No caso, elas estão dentro de: **assets/sprites/hamtaro/hamham.png**
+
+- O **endereco-do-mapeamento-json** é aonde se encontra o mapeamento da imagem. Usamos o **JSON** para guardar informaçes de tamanho e posição de cada sprite contido na imagem. Então esse arquivo se encontra em: **assets/sprites/maps/hamtaro.json**
+
 ## Criando um elemento de texto
+
+```
+function create () {
+
+    // Adiciona um texto para informar o score a jogadora
+    pontuacao = this.add.text(10, 10, 'SCORE: 0', { 
+        fontFamily: 'Arial', 
+        fontSize: 20,
+        fontWeight: 'bold',
+        color: '#000000' 
+    })
+
+}
+
+```
+
 ## Criando um elemento sprite
+
+```
+function create () {
+
+    ...
+    
+    // Cria um hamtaro que será controlado pela participante
+    hamtaro = this.physics.add.sprite(150, 150, 'hamtaro_atlas')
+
+}
+```
+
 ## Gravidade
+
+
+```
+    ...
+        
+        physics: {
+            default: 'arcade',
+            arcade: {
+                gravity: { y: 0 }
+            }
+        },
+        
+    ...
+```
+
 ## Dando movimento aos elementos
+
+
+```
+function create () {
+
+    ...
+    
+    // Captura todas as teclas do teclado
+    cursors = this.input.keyboard.createCursorKeys()
+    
+}
+```
+
+
+```
+// funcao para atualizar o jogo
+function update () {
+
+    // Controle pelas setas esquerda direita cima e baixo do teclado
+    if (cursors.left.isDown) {
+        hamtaro.x -= 3
+    } else if (cursors.right.isDown) {
+        hamtaro.x += 3
+    } else if (cursors.up.isDown) {
+        hamtaro.y -= 2
+    } else if (cursors.down.isDown) {
+        hamtaro.y += 2
+    }
+
+}
+```
+
 ## Criando animaçes
+
+```
+function create () {
+
+    ...
+    
+    // Cria as animações
+    this.anims.create({ 
+        key: 'direita', 
+        frames: this.anims.generateFrameNames('hamtaro_atlas', { 
+            prefix: 'hamtaro_', 
+            end: 3, 
+            start: 1
+        }),
+        repeat: -1,
+        duration: 300
+    });
+
+}
+
+```
+
+```
+function update () {
+
+    if (cursors.left.isDown) {
+        hamtaro.x -= 3
+    } else if (cursors.right.isDown) {
+        hamtaro.x += 3
+        
+        hamtaro.anims.play('direita', true)
+        
+    } else if (cursors.up.isDown) {
+        hamtaro.y -= 2
+    } else if (cursors.down.isDown) {
+        hamtaro.y += 2
+    }
+}
+
+```
+
 ## Criando colisões
+
+```
+function create () {
+    
+    ...
+    
+    // Cria um sprite de comida
+    comida = this.physics.add.sprite(x, y, 'comida_atlas', 'sprite92')
+    
+    // Informa que o hamtaro e a comida são passíveis de colisão
+    this.physics.add.collider(hamtaro, comida)    
+    
+}
+```
+
 ## Criando eventos com as colisões
+
+
+```
+function create () {
+
+    ...
+    
+    // Cria o evento que acontecera quando o hamtaro colidir com uma comida
+    this.physics.add.overlap(hamtaro, comida, function(){
+    
+        // vamos implementar uma logica para essa colisãoo!
+
+    }, null, this);
+
+}
+```
+
 ### Atualizando a posição do sprite do item
+
+
+```
+function create () {
+
+    ...
+    
+    // Cria o evento que acontecera quando o hamtaro colidir com uma comida
+    this.physics.add.overlap(hamtaro, comida, function(){
+        
+        // Escolhe randomicamente a nova posicao da comida
+        comida.x = randomNumber(50, window.innerWidth - 50)
+        comida.y = randomNumber(50, window.innerHeight - 50)
+
+    }, null, this);
+
+}
+```
+
+```
+// Funcao para retornar um valor randomico 
+function randomNumber (start, end) { return Phaser.Math.Between(start, end) }
+```
+
+### Trocar o sprite
+
+```
+function create () {
+
+    ...
+    
+    // Cria o evento que acontecera quando o hamtaro colidir com uma comida
+    this.physics.add.overlap(hamtaro, comida, function(){
+        
+        ...
+
+        // Cada numero indica uma imagem para uma comida diferente
+        let number = [92, 88, 87, 86, 85, 81, 78, 77, 76]
+        
+        // Escolhe um numero da lista acima 
+        number = random(number)
+        
+        // Troca a imagem da comida de acordo com o numero escolhido
+        comida.setTexture('comida_atlas', `sprite${number}`)
+
+    }, null, this);
+
+}
+```
+
+```
+// Funcao para retornar um valor randomico em um array
+function random (array) { return array[Math.floor(Math.random() * array.length)] }
+```
+
 ### Adicionar pontuação
+
+```
+function create () {
+
+    ...
+
+    // Variavel para guardar a pontuação
+    this.score = 0;
+
+    // Cria o evento que acontecera quando o hamtaro colidir com uma comida
+    this.physics.add.overlap(hamtaro, comida, function(){
+        
+        ...
+
+        // Adiciona pontuação ao score
+        this.score += 3
+        
+        // Adiciona a informação ao texto da tela
+        pontuacao.setText(`SCORE: ${this.score}`)
+
+    }, null, this);
+
+}
+```
