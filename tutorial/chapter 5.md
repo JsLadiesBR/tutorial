@@ -8,7 +8,7 @@ Preparamos para você um projeto pré-configurado com tudo que você vai presisa
 
 No final desse capítulo você terá esse jogo implementado:
 
-- [O jogo](http://jsladies.org/tutorial-hamtaro/)
+- [O jogo](http://hamtaro-jsladies.surge.sh/)
 
 O código final se encontra nesse link:
 
@@ -163,6 +163,8 @@ Vamos apenas comparar essas linhas de código e entender o que é cada coisa que
 
 ## Criando um elemento de texto
 
+Vamos adicionar algum elemento na nossa tela, utilizando uma função do framework **add.text()**:
+
 ```
 function create () {
 
@@ -177,6 +179,20 @@ function create () {
 }
 
 ```
+
+Assim como fizemos no exemplo anterior, vamos analisar o que está sendo feito:
+
+```
+    this.add.text( x , y , texto , configuracao )
+```
+
+Chamamos de parametros todas essas informações que ficam separadas entre virgulas e entre parenteses. 
+Os nossos parametros são:
+
+- **x** e **y**, que serão usados para determinar a posição que ficará o texto na tela. Usamos o plano cartesiano para orientar os elementos visuais na tela do computador. Então **x** e **y** esperam valores númericos e inteiros.
+- **texto**, é propriamente o texto que queremos escrever na tela
+- **configuração**, será todo o estilo que iremos aplicar no nosso texto. Podemos informar qual fonte (*fontFamily*) queremos usar, o seu tamanho (*fontSize*), o seu peso (*fontWeight*) e a cor (*color*)
+
 
 ## Criando um elemento sprite
 
