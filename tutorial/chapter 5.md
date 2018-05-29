@@ -163,7 +163,7 @@ Vamos apenas comparar essas linhas de código e entender o que é cada coisa que
 
 ## Criando um elemento de texto
 
-Vamos adicionar algum elemento na nossa tela, utilizando uma função do framework **add.text()**:
+Vamos adicionar algum elemento de texto na nossa tela, utilizando uma função do framework **add.text()**:
 
 ```
 function create () {
@@ -173,7 +173,7 @@ function create () {
         fontFamily: 'Arial', 
         fontSize: 20,
         fontWeight: 'bold',
-        color: '#000000' 
+        color: '#000000'
     })
 
 }
@@ -193,8 +193,14 @@ Os nossos parametros são:
 - **texto**, é propriamente o texto que queremos escrever na tela
 - **configuração**, será todo o estilo que iremos aplicar no nosso texto. Podemos informar qual fonte (*fontFamily*) queremos usar, o seu tamanho (*fontSize*), o seu peso (*fontWeight*) e a cor (*color*)
 
+**Após adicionar as novas linhas salve as alteraçes e atualize o seu navegador, veja o que aconteceu**
 
 ## Criando um elemento sprite
+
+Agora vamos para a parte mais divertida! Vamos adicionar o nosso personagem!
+Ainda na função **create**, vamos adicionar mais algumas linhas de código.
+
+**OBS:** Para te orientar usaremos: **...** Isso significa que existe um código adicionado em uma etapa anterior.
 
 ```
 function create () {
@@ -207,8 +213,18 @@ function create () {
 }
 ```
 
+Analisando o comando:
+```
+this.physics.add.sprite( x , y , identificacao-do-sprite )
+```
+
+Já vimos nos exemplos anteriores o que cada uma dessas informações significam. A **identificacao-do-sprite** foi definida no momento que fiz o carregamento dos recursos. Chamamos o recurso de **hamtaro_atlas**
+
+**Após adicionar as novas linhas salve as alteraçes e atualize o seu navegador, veja o que aconteceu**
+
 ## Gravidade
 
+Percebemos que o sprite apareceu e logo em seguida sofreu um efeito de queda. Isso acontece devido as nossas configurações de jogo. No inicio desse capítulo fizemos algumas configurações, procure por esse bloco de código e altere o valor de **gravity: { y: 200 }** para **gravity: { y: 0 }**. Ficando assim:
 
 ```
     ...
@@ -222,6 +238,10 @@ function create () {
         
     ...
 ```
+
+Essa alteração remove a gravidade do mundo que criamos no nosso jogo.
+
+**Após adicionar as novas linhas salve as alteraçes e atualize o seu navegador, veja o que aconteceu**
 
 ## Dando movimento aos elementos
 
