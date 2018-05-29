@@ -410,6 +410,7 @@ Adicionamos um sprite novo e após isso informamos que o nosso personagem **hamt
 
 ## Criando eventos com as colisões
 
+Agora vamos criar um evento que acontecerá sempre que o nosso personagem colidir com uma comida, adicione o seguinte código:
 
 ```
 function create () {
@@ -425,6 +426,12 @@ function create () {
 
 }
 ```
+
+O **physics.add.overlap** faz a função de criar esse evento, sempre que o **hamtaro** e a **comida** colidirem, uma rotina dentro desse escopo irá ser iniciada. Nós próximos passos iremos implementar:
+
+1) A funcionalidade de mudar aleatóriamente a localizacao da comida na tela
+2) A funcionalidade de adicionar pontos
+3) A funcionalidade de mudar o sprite da comida aleatóriamente
 
 ### Atualizando a posição do sprite do item
 
