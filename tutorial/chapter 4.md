@@ -191,17 +191,49 @@ Tente esses também:
 3 > 2 || 2 < 1
 ```
 
-Acho que agora complicou um pouquinho, mas não se assuste! Esses novos operadores `&&` e `||` são utilizados para quando temos mais de uma comparação em nossa condição que queremos afirmar ao computador.
+Acho que agora complicou um pouquinho, mas não se assuste! Esses novos operadores `&&` e `||` são utilizados quando temos mais de uma comparação na condição que queremos afirmar ao computador.
 
 - `&&` - É o nosso operador **and** ou **e**
 - `||` - É o nosso operador **or** ou **ou**
+- `!` - É o nosso operador de negação **not** ou **não**
 
 Vamos tentar trazer isso para o nosso mundo, usamos *e* ou *ou* em nossas afirmações a todo momento, por exemplo:
 
 - o gato é preto **e** branco
 - o gato é preto **ou** branco
 
-Perceba que o sentido das frases muda de acordo com o operador que é usado.
+Perceba que o sentido das frases muda de acordo com o operador que é usado e isso não é diferente na programação.
+
+# IF, ELSE e ELSE IF
+
+Anteriormente vimos como criar comparações entre valores, agora vamos aprofundar um pouco mais e vamos criar sentenças condicionais. Essas condicionais são feitas com as seguintes palavras **if**, **else** e **else if**
+
+- **if**, é o **se**
+- **else** é o **se não**
+- **else if** é o **se não se**
+
+No nosso dia a dia também utilizamos bastante essas palavras, quase a todo momento estamos condicionando algo, por exemplo:
+
+- **se** chover não irei ao colégio
+- **se não** chover e **se** houver onibus, irei ao colégio
+- **se não** chover irei ao colégio
+
+Vamos tentar codificar em JavaScript essas condicionais em um pseudo-código:
+
+```
+estaChovendo = true
+temOnibus = true
+
+if (estaChovendo && !temOnibus) {
+  // não irei ao colégio
+} else if (temOnibus) {
+  // irei ao colegio
+} else {
+  // irei ao colegio
+}
+
+```
+
  
 
 ## Referências
