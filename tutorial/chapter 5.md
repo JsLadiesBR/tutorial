@@ -382,11 +382,13 @@ function update () {
 
 Adicionamos a linha `hamtaro.anims.play('direita', true)`. Esse comando faz a animação ser iniciada sempre que teclarmos o direcional para direita.
 
-**Tentem criar as demais animaçes com base no que foi explicado nesse tópico**.
+**Tente criar as demais animaçes com base no que foi explicado nesse tópico**.
 
 **Após adicionar as novas linhas salve as alteraçes e atualize o seu navegador, veja o que aconteceu**
 
 ## Criando colisões
+
+Chamamos de colisões o momento onde os elementos do jogo se encontram. Uma colisão pode encadear uma série de ações ou simplesmente impedir um personagem de ultrapassar um desafio. Para fazer os objetos se tocarem podemos usar o comando **physics.add.collider**, assim informamos para o framework quais elementos são passíveis de colisão, assim o jogo saberá que determinados objetos não podem ocupar o mesmo espaço ou acionarão algum evento. Segue o código:
 
 ```
 function create () {
@@ -394,13 +396,17 @@ function create () {
     ...
     
     // Cria um sprite de comida
-    comida = this.physics.add.sprite(x, y, 'comida_atlas', 'sprite92')
+    comida = this.physics.add.sprite(10, 60, 'comida_atlas', 'sprite92')
     
     // Informa que o hamtaro e a comida são passíveis de colisão
     this.physics.add.collider(hamtaro, comida)    
     
 }
 ```
+
+Adicionamos um sprite novo e após isso informamos que o nosso personagem **hamtaro** vai colidir com a **comida**
+
+**Após adicionar as novas linhas salve as alteraçes e atualize o seu navegador, veja o que aconteceu**
 
 ## Criando eventos com as colisões
 
