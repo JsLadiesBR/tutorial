@@ -283,7 +283,13 @@ function update () {
 - cursors.left.**isDown** nos indica se a tecla foi acionada pela jogadora.
 - hamtaro.**x** e hamtaro.**y** recebem sempre um valor atualizado devido ao **+=** ou **-=** que incrementa e decrementa a posição do personagem, fazendo assim, a movimentação do nosso personagem.
 
+**Após adicionar as novas linhas salve as alteraçes e atualize o seu navegador, veja o que aconteceu**
+
 ## Criando animaçes
+
+Para criar animaçes precisamos primeiro entender como está disposta a nossa imagem que contem os sprites do nosso personagem. Vamos abrir a imagem **assets/sprites/hamtaro/hamham.png** e verificar o que temos.
+
+Você vai ver que algumas imagens são complementares, elas dão uma sensação de animação, e elas vão dar vida ao nosso personagem. Voltando a função **create**...
 
 ```
 function create () {
@@ -306,6 +312,55 @@ function create () {
 
 ```
 
+O comando **anims.create** receber um parametro de configuração, onde poderemos definir com quais sprites da nossa imagem (**hamham.png**), nós iremos criar uma animação. 
+
+1) Primeiro passo definimos um nome para essa animação **key: 'direita'**, o nome será **direita**. Vamos utilizar esse nome futuramente.
+
+2) Vamos definir os frames, cada frame é um sprite da imagem que queremos usar para montar a nossa animação. 
+    
+    O **anims.generateFrameNames** cria esses frames para nós. 
+    
+    Mas antes, abra o arquivo **assets/sprites/maps/hamtaro.json**.
+    
+```
+{
+    "frames":{
+        "hamtaro_1":{
+            "frame":{
+               "x":259,
+               "y":98,
+               "w":38,
+               "h":29
+            },
+            "rotated":false,
+            "trimmed":false,
+            "spriteSourceSize":{
+               "x":0,
+               "y":0,
+               "w":38,
+               "h":29
+            },
+            "sourceSize":{
+               "w":38,
+               "h":29
+            }
+        },
+    
+        ...
+        
+    }
+}
+
+```
+
+Essa é a aparencia do nosso **hamtaro.json**. Dentro desse arquivo existem todas as configurações que o comando **anims.generateFrameNames** precisa para identificar a imagem que precisamos. Passamos para o comando as seguintes informaçes: **prefix**, **start** e **end**. Isso quer dizer que na configuração passada no exemplo o comando está criando frames dos sprites **hamtaro_1**, **hamtaro_2** e **hamtaro_3**
+
+3) **repeat** e **duration**, o valor **-1** em repeat significa que a animação será infinita e a duração de 300ms
+
+
+Uma vez que a animação foi criada uma animação, podemos fazer uso da mesma. 
+
+Volte para a funçao **update** e atualize para ficar dessa forma:
 ```
 function update () {
 
@@ -324,6 +379,12 @@ function update () {
 }
 
 ```
+
+Adicionamos a linha `hamtaro.anims.play('direita', true)`. Esse comando faz a animação ser iniciada sempre que teclarmos o direcional para direita.
+
+**Tentem criar as demais animaçes com base no que foi explicado nesse tópico**.
+
+**Após adicionar as novas linhas salve as alteraçes e atualize o seu navegador, veja o que aconteceu**
 
 ## Criando colisões
 
