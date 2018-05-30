@@ -1,4 +1,6 @@
-Capitulo 2 - HTML & CSS
+# Capitulo 2 - HTML & CSS
+
+## HTML (Hypertext Markup Language)
 
 Agora que sabemos como a web funciona, vamos começar por a mão na massa?
 
@@ -49,5 +51,12 @@ Com o arquivo aberto no editor, vamos começar a criar a estrutura do nosso site
     </body>
 </html>
 ```
-  O html não é uma linguagem de programação e sim uma linguagem de marcação, e utilizamos as tags para avisar qual é o elemento que o nosso navegador deve redenrizar. As tags são elementos que possui  
+  O html não é uma linguagem de programação e sim uma linguagem de marcação, e utilizamos as tags para avisar qual é o elemento que o nosso navegador deve redenrizar. As tags começam com < e terminam com >. Essas tags marcam os elementos. 
     
+  A tag principal é a <html> ela deve ser colocada qualquer página da web e deve sempre encerrar a página com </html>, as outras tags vão dentro dela, como é mostrado no código acima.
+  
+A tag <head> é um elemento que contém informações sobre o documento que não são mostradas na tela e a tag <body> é um elemento que contém tudo o que é exibido como parte de uma página de um site.
+    
+Para ver mais tags e sua usagem indicamos o site com a lista a seguir: https://developer.mozilla.org/pt-BR/docs/Web/HTML/HTML5/HTML5_element_list
+
+## CSS (Cascading Stylesheets)
