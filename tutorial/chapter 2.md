@@ -1,12 +1,12 @@
 # Capitulo 2 - HTML & CSS
 
+Agora que sabemos como a web funciona, vamos começar por a mão na massa?
+Uma página web possui 3 pilares: HTML, CSS E Javascript.
+O HTML é a estrutura do site, CSS é aparência e o Javascript é o que anima e faz as funcionalidades do site.
+
 ## HTML (Hypertext Markup Language)
 
-Agora que sabemos como a web funciona, vamos começar por a mão na massa?
-
-Uma página web possui 3 pilares: HTML, CSS E Javascript.
-
-O HTML é a estrutura do site, CSS é aparência e o Javascript é o que anima e faz as funcionalidades do site.
+Agora vamos criar um arquivo html para ver na prática como ele funciona.
 
 Para inicar a construção do nosso projeto, pelo seu Terminal (Linux ou MAC) ou CMD (Windows) digite o seguinte comando:
 ```
@@ -60,3 +60,16 @@ A tag <head> é um elemento que contém informações sobre o documento que não
 Para ver mais tags e sua usagem indicamos o site com a lista a seguir: https://developer.mozilla.org/pt-BR/docs/Web/HTML/HTML5/HTML5_element_list
 
 ## CSS (Cascading Stylesheets)
+
+Até agora o seu html está muito "preto e branco", que tal colorirmos nossa página web?
+
+Vamos lá na nossa pastinha do projeto (tutorial-jsladies), se não souber onde está você pode fechar o seu Terminal/CMD e abrir e rodaro comando:
+```
+cd tutorial-jsladies
+```
+Agora que temos um local para inicar o nosso projeto, vamos criar nosso primeiro arquivo, para isso rode o seguinte comando:
+```
+touch main.css
+```
+Esse comando acima criou um arquivo css. 
+
