@@ -430,11 +430,12 @@ function create () {
 O **physics.add.overlap** faz a função de criar esse evento, sempre que o **hamtaro** e a **comida** colidirem, uma rotina dentro desse escopo irá ser iniciada. Nós próximos passos iremos implementar:
 
 1) A funcionalidade de mudar aleatóriamente a localizacao da comida na tela
-2) A funcionalidade de adicionar pontos
-3) A funcionalidade de mudar o sprite da comida aleatóriamente
+2) A funcionalidade de mudar o sprite da comida aleatóriamente
+3) A funcionalidade de adicionar pontos
 
 ### Atualizando a posição do sprite do item
 
+Vamos implementar a funcionalidade que irá trocar a posição da comida na tela aleatóriamente
 
 ```
 function create () {
@@ -453,12 +454,32 @@ function create () {
 }
 ```
 
+O comando **randomNumber** que está no bloco a seguir vai nos retornar sempre um número aleatório entre 50 ~ ( Tamanho da Tela - 50 ). Adicione essa função no inicio do arquivo **main.js**
+
 ```
 // Funcao para retornar um valor randomico 
 function randomNumber (start, end) { return Phaser.Math.Between(start, end) }
 ```
 
 ### Trocar o sprite
+
+Estamos quase lá! Agora iremos implementar a nossa segunda funcionalidade.
+
+Criaremos uma lista de números e cada número representará uma dessas comidinhas:
+
+```
+    // cenoura = 92
+    // pao = 88
+    // limao = 87
+    // banana = 86
+    // rabanete = 85
+    // cogumelo = 81
+    // laranja = 78
+    // figo = 77
+    // pera = 76
+```
+
+**OBS:** você pode ir em **assets/sprites/maps/food.json** e escolher outros números que estejam mapeados e adicionar a nossa lista.
 
 ```
 function create () {
@@ -484,12 +505,16 @@ function create () {
 }
 ```
 
+O comando **random** que está no bloco a seguir vai nos retornar sempre um número aleatório que exista dentro de uma lista. Adicione essa função no inicio do arquivo **main.js**
+
 ```
 // Funcao para retornar um valor randomico em um array
 function random (array) { return array[Math.floor(Math.random() * array.length)] }
 ```
 
 ### Adicionar pontuação
+
+E por fim, vamos adicionar uma pontuação para cada comida que o personagem tocar.
 
 ```
 function create () {
@@ -514,3 +539,19 @@ function create () {
 
 }
 ```
+
+## Fazendo Deploy do Jogo
+
+Uma vez que criamos todas essas funcionalidades já temos um pequeno jogo pronto, outras funcionalidades podem ser criadas o que vale agora é a criatividade!
+
+Mas essas melhorias no jogo podem ser feitas posteriormente, o que queremos agora é distribuir esse jogo na internet!
+
+Se o seu servidor estiver funcionando, faça **CTRL + C** para derrubar-lo e digite o seguinte comando:
+
+```
+$ npm run deploy
+```
+
+Siga os passos que forem pedidos nesse momento e acesse o seu site na url escolhida! =D
+
+# FIM!
