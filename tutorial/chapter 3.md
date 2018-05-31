@@ -180,15 +180,19 @@ E o menor e igual
 Tente esses também:
 
 ```
-6 > 2 && 2 < 3
+(6 > 2) && (2 < 3)
 ```
 
 ```
-3 > 2 && 2 < 1
+(3 > 2) && (2 < 1)
 ```
 
 ```
-3 > 2 || 2 < 1
+(3 > 2) || (2 < 1)
+```
+
+```
+! (3 > 2 )
 ```
 
 Acho que agora complicou um pouquinho, mas não se assuste! Esses novos operadores `&&` e `||` são utilizados quando temos mais de uma comparação na condição que queremos afirmar ao computador.
@@ -204,9 +208,19 @@ Vamos tentar trazer isso para o nosso mundo, usamos *e* ou *ou* em nossas afirma
 
 Perceba que o sentido das frases muda de acordo com o operador que é usado e isso não é diferente na programação.
 
+No caso do `!` ele negará uma condição.  Se a condição tiver uma resposta verdadeira ele vai transformar em falsa ou se a condição tiver uma resposta falsa ele vai tornar ela verdadeira. Basta testar:
+
+```
+3 > 2
+```
+
+```
+! 3 > 2
+```
+
 # IF, ELSE e ELSE IF
 
-Anteriormente vimos como criar comparações entre valores, agora vamos aprofundar um pouco mais e vamos criar sentenças condicionais. Essas condicionais são feitas com as seguintes palavras **if**, **else** e **else if**
+Anteriormente vimos como criar comparações entre valores, agora vamos aprofundar um pouco mais e vamos criar sentenças condicionais. Essas condicionais podem ser feitas com as seguintes palavras **if**, **else** e **else if**
 
 - **if**, é o **se**
 - **else** é o **se não**
@@ -218,23 +232,30 @@ No nosso dia a dia também utilizamos bastante essas palavras, quase a todo mome
 - **se não** chover e **se** houver onibus, irei ao colégio
 - **se não** chover irei ao colégio
 
-Vamos tentar codificar em JavaScript essas condicionais em um pseudo-código:
+Vamos tentar codificar em JavaScript essas condicionais em um código:
 
 ```
 estaChovendo = true
-temOnibus = true
+temOnibus = false
 
+// Se está chovendo e não tem onibus...
 if (estaChovendo && !temOnibus) {
-  // não irei ao colégio
+  console.log('não irei ao colégio pq nao tem onibus e está chovendo')
+  
+// mas...
+// se tem onibus...
 } else if (temOnibus) {
-  // irei ao colegio
+  console.log('está chovendo mas irei ao colegio pq tem onibus')
+  
+// mas...
+// se não...
 } else {
-  // irei ao colegio
+  console.log('irei ao colegio')
 }
 
 ```
 
- 
+ Tente trocar os valores das variáveis **estaChovendo** e **temOnibus** e veja como funcionará o código.
 
 ## Referências
 
