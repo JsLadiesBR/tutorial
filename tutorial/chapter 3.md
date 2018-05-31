@@ -257,9 +257,55 @@ if (estaChovendo && !temOnibus) {
 
  Tente trocar os valores das variáveis **estaChovendo** e **temOnibus** e veja como funcionará o código.
 
-## Referências
+# Funções
 
-### O que é JavaScript
+Antes de falarmos sobre funções, quantas vezes você precisou repetir o código do exemplo anterior para verificar todas possibilidades?
+Se você testou todas elas, acredito que precisou copiar e colar o mesmo código várias vezes. Isso ficou enorme ou confuso?
+
+As funções podem te ajudar nesse caso!
+
+Com funções você pode transformar todas aquelas linhas em apenas uma! Incrivel, não é?
+
+Mas você deve estar se perguntando: "Como isso é possivel?"
+
+É possivel! Apenas nomeando e isolando um trecho de código! 
+
+As funções são utilizadas para encapsular pequenas funcionalidades e garantir que o programador possa fazer o reuso de código. 
+
+Mas chega de bla-bla-bla e vamos a prática!
+
+Para definir uma função, temos:
+
+```
+ function funcaoSemParametros () { // escreva aqui dentro o seu código }
+ function funcaoComParametros (parametros) { // escreva aqui dentro o seu código }
+```
+
+A palavra **function** é mais uma palavra reservada do JavaScript, com ela podemos declarar uma função. Em seguida vem o nome que queremos dar a nossa função (**funcaoSemParametros**), seguido do nome temos por obrigação os parenteses `()` que indicam o que podemos passar para dentro do escopo dessa função e por fim as chaves `{ }` que vão delimitar a àrea/escopo da função.
+
+Então vamos transformar o exemplo do topico anterior em uma função:
+
+```
+ fuction irParaEscola (estaChovendo, temOnibus) {
+   if (estaChovendo && !temOnibus) {
+     console.log('não irei ao colégio pq nao tem onibus e está chovendo')
+   } else if (temOnibus) {
+     console.log('está chovendo mas irei ao colegio pq tem onibus')
+   } else {
+     console.log('irei ao colegio')
+   }
+ }
+ ```
+ 
+ Agora que criamos a nossa função, podemos usa-la:
+ 
+```
+ irParaEscola( true, false )
+```
+
+# Referências
+
+## O que é JavaScript
 https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/O_que_e_JavaScript
 
 ### 
