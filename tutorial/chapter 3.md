@@ -264,11 +264,11 @@ Se você testou todas elas, acredito que precisou copiar e colar o mesmo código
 
 As funções podem te ajudar nesse caso!
 
-Com funções você pode transformar todas aquelas linhas em apenas uma! Incrivel, não é?
+Com funções você pode transformar todas aquelas linhas em apenas uma! Incrível, não é?
 
-Mas você deve estar se perguntando: "Como isso é possivel?"
+Mas você deve estar se perguntando: "Como isso é possível?"
 
-É possivel! Apenas nomeando e isolando um trecho de código! 
+É possível! Apenas nomeando e isolando um trecho de código! 
 
 As funções são utilizadas para encapsular pequenas funcionalidades e garantir que o programador possa fazer o reuso de código. 
 
@@ -278,6 +278,8 @@ Para definir uma função, temos:
 
 ```
  function funcaoSemParametros () { // escreva aqui dentro o seu código }
+ 
+ // ou podemos escrever assim...
  function funcaoComParametros (parametros) { // escreva aqui dentro o seu código }
 ```
 
@@ -302,6 +304,40 @@ Então vamos transformar o exemplo do topico anterior em uma função:
 ```
  irParaEscola( true, false )
 ```
+
+# Iteração ou Repetição
+
+Toda linguagem de programação permite que o programador possa iterar ou repetir determinado bloco de código quantas vezes for necessário.
+Isso é feito muitas vezes através do **for**, o comando do "enquanto". Vamos dar uma olhada:
+
+```
+for ( i = 0 ; i < 10 ; i++ ) {
+ console.log(i + "º iteração.")
+}
+```
+
+- **for** é a nossa palavra reservada e com ela podemos iniciar um laço apartir da condição que virá dentro do `()`
+- **i = 0** é o parametro inicial
+- **i < 10** é a condição para finalizar a repetição do laço
+- E por fim o **i++** que é o parametro que incrementará mais 1 ao valor da variavel **i**
+
+Antes de finalizarmos vamos analisar e revisar o seguinte código:
+
+```
+crystalGems = ['Garnet', 'Pearl', 'Amethyst', 'Rose', 'Steven']
+tamanho = crystalGems.length
+
+function ola (nome) {
+ console.log( "Olá! " + nome )
+}
+
+for (i = 0; i < tamanho ; i++) {
+ ola( crystalGems[i] )
+}
+
+```
+
+Chegamos ao final da nossa breve introdução ao JavaScript, existe muito mais assunto para ser visto do que esses tópicos desse artigo. Mas não desanime! Esses tópicos são o suficiente e te ajudarão a construir nosso projeto de jogo no próximo cápitulo!
 
 # Referências
 
