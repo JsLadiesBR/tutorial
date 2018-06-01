@@ -296,8 +296,8 @@ function create () {
         key: 'direita', 
         frames: this.anims.generateFrameNames('hamtaro_atlas', { 
             prefix: 'hamtaro_', 
-            end: 3, 
-            start: 1
+            start: 1,
+            end: 3            
         }),
         repeat: -1,
         duration: 300
