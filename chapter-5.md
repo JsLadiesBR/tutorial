@@ -1,6 +1,6 @@
 # Capitulo 5 - Colocando no ar.
 
-## Capítulo 8 - Git e GitHub Pages
+## Capítulo 5 - Git e GitHub Pages
 
 Antes de terminar o tutorial, vamos colocar o seu jogo no ar?
 
