@@ -364,6 +364,10 @@ O comando **anims.create** receber um parametro de configuração, onde poderemo
 
 2\) Vamos definir os frames, cada frame é um sprite da imagem que queremos usar para montar a nossa animação.
 
+O **anims.generateFrameNames** cria esses frames para nós. 
+
+Mas antes, abra o arquivo **assets/sprites/maps/hamtaro.json**.
+
 {% code-tabs %}
 {% code-tabs-item title="hamtaro.js" %}
 ```javascript
