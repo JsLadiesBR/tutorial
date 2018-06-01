@@ -12,7 +12,7 @@ Dentro do console é possivel executar qualquer código JavaScript, então vamos
 
 Digite no seu console a seguinte operação:
 
-```text
+```javascript
 15 + 34
 ```
 
@@ -20,15 +20,15 @@ O retorno deverá ser: `< 49`
 
 Como você pode ver as operações matemáticas podem ser compreendidas e calculadas pelo console do navegador. Você também pode tentar outros comandos como:
 
-```text
+```javascript
 5 - 1
 ```
 
-```text
+```javascript
 34 / 4
 ```
 
-```text
+```javascript
 9 * 8
 ```
 
@@ -36,7 +36,7 @@ Como você pode ver as operações matemáticas podem ser compreendidas e calcul
 
 String é uma sequencia de caracteres, você pode criar sua primeira string da seguinte forma:
 
-```text
+```javascript
 "JS Ladies!"
 ```
 
@@ -44,7 +44,7 @@ Uma string será sempre iniciada com aspas duplas ou simples `"` ou `'`
 
 Você também pode saber o tamanho de uma string dessa forma:
 
-```text
+```javascript
 "JS Ladies!".length
 ```
 
@@ -56,15 +56,15 @@ O tamanho da string condiz com a quantidade de caracteres que existe entre as as
 
 Uma variável na programação representa um espaço na memória do computador que pode ser usado para guardar informações. Podemos fazer uma abstração sobre isso! Imagine que uma variável é uma caixa, nós temos diversas caixas para propositos diferentes, algumas guardam sapatos, outras guardam brinquedos e por aí vai. Vamos representar nossa abstração em forma de código.
 
-```text
+```javascript
 caixa1 = "sapatos"
 ```
 
-```text
+```javascript
 caixa2 = "brinquedos"
 ```
 
-```text
+```javascript
 caixa3 = "livros"
 ```
 
