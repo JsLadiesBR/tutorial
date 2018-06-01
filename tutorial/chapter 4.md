@@ -70,7 +70,7 @@ function principal () {
     var largura = ''
     var altura = ''
 
-    // cria uma variável com as configuraçes do jogo
+    // cria uma variável com as configurações do jogo
     var conf = {
         type: Phaser.AUTO,
         width: largura,
@@ -159,7 +159,7 @@ Vamos apenas comparar essas linhas de código e entender o que é cada coisa que
 
 - O **endereco-da-imagem** é aonde se encontra as imagens do recurso que quero usar. No caso, elas estão dentro de: **assets/sprites/hamtaro/hamham.png**
 
-- O **endereco-do-mapeamento-json** é aonde se encontra o mapeamento da imagem. Usamos o **JSON** para guardar informaçes de tamanho e posição de cada sprite contido na imagem. Então esse arquivo se encontra em: **assets/sprites/maps/hamtaro.json**
+- O **endereco-do-mapeamento-json** é aonde se encontra o mapeamento da imagem. Usamos o **JSON** para guardar informações de tamanho e posição de cada sprite contido na imagem. Então esse arquivo se encontra em: **assets/sprites/maps/hamtaro.json**
 
 ## Criando um elemento de texto
 
@@ -193,7 +193,7 @@ Os nossos parametros são:
 - **texto**, é propriamente o texto que queremos escrever na tela
 - **configuração**, será todo o estilo que iremos aplicar no nosso texto. Podemos informar qual fonte (*fontFamily*) queremos usar, o seu tamanho (*fontSize*), o seu peso (*fontWeight*) e a cor (*color*)
 
-**Após adicionar as novas linhas salve as alteraçes e atualize o seu navegador, veja o que aconteceu**
+**Após adicionar as novas linhas salve as alterações e atualize o seu navegador, veja o que aconteceu**
 
 ## Criando um elemento sprite
 
@@ -220,7 +220,7 @@ this.physics.add.sprite( x , y , identificacao-do-sprite )
 
 Já vimos nos exemplos anteriores o que cada uma dessas informações significam. A **identificacao-do-sprite** foi definida no momento que fiz o carregamento dos recursos. Chamamos o recurso de **hamtaro_atlas**
 
-**Após adicionar as novas linhas salve as alteraçes e atualize o seu navegador, veja o que aconteceu**
+**Após adicionar as novas linhas salve as alterações e atualize o seu navegador, veja o que aconteceu**
 
 ## Gravidade
 
@@ -241,7 +241,7 @@ Percebemos que o sprite apareceu e logo em seguida sofreu um efeito de queda. Is
 
 Essa alteração remove a gravidade do mundo que criamos no nosso jogo.
 
-**Após adicionar as novas linhas salve as alteraçes e atualize o seu navegador, veja o que aconteceu**
+**Após adicionar as novas linhas salve as alterações e atualize o seu navegador, veja o que aconteceu**
 
 ## Dando movimento aos elementos
 
@@ -283,11 +283,11 @@ function update () {
 - cursors.left.**isDown** nos indica se a tecla foi acionada pela jogadora.
 - hamtaro.**x** e hamtaro.**y** recebem sempre um valor atualizado devido ao **+=** ou **-=** que incrementa e decrementa a posição do personagem, fazendo assim, a movimentação do nosso personagem.
 
-**Após adicionar as novas linhas salve as alteraçes e atualize o seu navegador, veja o que aconteceu**
+**Após adicionar as novas linhas salve as alterações e atualize o seu navegador, veja o que aconteceu**
 
-## Criando animaçes
+## Criando animações
 
-Para criar animaçes precisamos primeiro entender como está disposta a nossa imagem que contem os sprites do nosso personagem. Vamos abrir a imagem **assets/sprites/hamtaro/hamham.png** e verificar o que temos.
+Para criar animações precisamos primeiro entender como está disposta a nossa imagem que contem os sprites do nosso personagem. Vamos abrir a imagem **assets/sprites/hamtaro/hamham.png** e verificar o que temos.
 
 Você vai ver que algumas imagens são complementares, elas dão uma sensação de animação, e elas vão dar vida ao nosso personagem. Voltando a função **create**...
 
@@ -353,14 +353,14 @@ O comando **anims.create** receber um parametro de configuração, onde poderemo
 
 ```
 
-Essa é a aparencia do nosso **hamtaro.json**. Dentro desse arquivo existem todas as configurações que o comando **anims.generateFrameNames** precisa para identificar a imagem que precisamos. Passamos para o comando as seguintes informaçes: **prefix**, **start** e **end**. Isso quer dizer que na configuração passada no exemplo o comando está criando frames dos sprites **hamtaro_1**, **hamtaro_2** e **hamtaro_3**
+Essa é a aparencia do nosso **hamtaro.json**. Dentro desse arquivo existem todas as configurações que o comando **anims.generateFrameNames** precisa para identificar a imagem que precisamos. Passamos para o comando as seguintes informações: **prefix**, **start** e **end**. Isso quer dizer que na configuração passada no exemplo o comando está criando frames dos sprites **hamtaro_1**, **hamtaro_2** e **hamtaro_3**
 
 3) **repeat** e **duration**, o valor **-1** em repeat significa que a animação será infinita e a duração de 300ms
 
 
 Uma vez que a animação foi criada uma animação, podemos fazer uso da mesma. 
 
-Volte para a funçao **update** e atualize para ficar dessa forma:
+Volte para a função **update** e atualize para ficar dessa forma:
 ```
 function update () {
 
@@ -382,9 +382,9 @@ function update () {
 
 Adicionamos a linha `hamtaro.anims.play('direita', true)`. Esse comando faz a animação ser iniciada sempre que teclarmos o direcional para direita.
 
-**Tente criar as demais animaçes com base no que foi explicado nesse tópico**.
+**Tente criar as demais animações com base no que foi explicado nesse tópico**.
 
-**Após adicionar as novas linhas salve as alteraçes e atualize o seu navegador, veja o que aconteceu**
+**Após adicionar as novas linhas salve as alterações e atualize o seu navegador, veja o que aconteceu**
 
 ## Criando colisões
 
@@ -406,7 +406,7 @@ function create () {
 
 Adicionamos um sprite novo e após isso informamos que o nosso personagem **hamtaro** vai colidir com a **comida**
 
-**Após adicionar as novas linhas salve as alteraçes e atualize o seu navegador, veja o que aconteceu**
+**Após adicionar as novas linhas salve as alterações e atualize o seu navegador, veja o que aconteceu**
 
 ## Criando eventos com as colisões
 
