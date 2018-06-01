@@ -68,11 +68,11 @@ caixa2 = "brinquedos"
 caixa3 = "livros"
 ```
 
-```text
+```javascript
 caixa4 = 3 * 4
 ```
 
-```text
+```javascript
 caixa5 = true
 ```
 
@@ -82,7 +82,7 @@ Criamos 3 variáveis, cada uma está guardando um valor graças ao simbolo do `=
 
 Para criar uma lista é tranquilo, basta fazer dessa forma:
 
-```text
+```javascript
 numeros = []
 ```
 
@@ -90,13 +90,13 @@ E assim teremos uma lista vazia chamada `numeros`.
 
 As listas são usadas para guardar vários valores, agrupados, geralmente com alguma afinidade ou propósito. Vamos supor que você tenha uma lista de produtos que deseja comprar no mercado. Para representar essa lista de produtos no JavaScript seria assim:
 
-```text
+```javascript
 produtos = ['abacaxi', 'laranja', 'feijão', 'maionese', 'açucar']
 ```
 
 Podemos fazer uma série de coisas com uma lista, assim como nas strings também conseguimos ver o tamanho de uma lista
 
-```text
+```javascript
 produtos.length
 ```
 
@@ -104,7 +104,7 @@ O retorno desse comando será: `5`
 
 Também podemos ordenar de forma alfabética a nossa lista atraves desse comando:
 
-```text
+```javascript
 produtos.sort()
 ```
 
@@ -112,25 +112,25 @@ E o retorno será: `< ["abacaxi", "açucar", "feijão", "laranja", "maionese"]`
 
 E se quisermos ordenar ela de forma inversa, podemos usar esse comando:
 
-```text
+```javascript
 produtos.reverse()
 ```
 
 E teremos:
 
-```text
+```javascript
 ["maionese", "laranja", "feijão", "açucar", "abacaxi"]
 ```
 
 E se quisermos adicionar um novo produto na nossa lista? Podemos fazer dessa forma:
 
-```text
+```javascript
 produtos.push('café')
 ```
 
 Como fizemos um comando de inverter os elementos da nossa lista anteriormente, o resultado após a adição do novo produto fica sendo:
 
-```text
+```javascript
 ["maionese", "laranja", "feijão", "açucar", "abacaxi", "café"]
 ```
 
@@ -140,23 +140,23 @@ O comando push adiciona sempre um novo elemento no final de uma lista.
 
 Na programação a comparação é algo essencial. Então vamos começar por comparação de números. Faça as seguintes comparaçes:
 
-```text
+```javascript
 5 > 6
 ```
 
-```text
+```javascript
 5 < 6
 ```
 
-```text
+```javascript
 10 == 8
 ```
 
-```text
+```javascript
 20 * 5 < 30 * 3
 ```
 
-```text
+```javascript
 35 != 2
 ```
 
@@ -166,31 +166,31 @@ Ainda temos outros operadores para comparação são eles:
 
 O maior e igual:
 
-```text
+```javascript
 6 >= 12/2
 ```
 
 E o menor e igual
 
-```text
+```javascript
  3 <= 2
 ```
 
 Tente esses também:
 
-```text
+```javascript
 (6 > 2) && (2 < 3)
 ```
 
-```text
+```javascript
 (3 > 2) && (2 < 1)
 ```
 
-```text
+```javascript
 (3 > 2) || (2 < 1)
 ```
 
-```text
+```javascript
 ! (3 > 2 )
 ```
 
@@ -209,11 +209,11 @@ Perceba que o sentido das frases muda de acordo com o operador que é usado e is
 
 No caso do `!` ele negará uma condição. Se a condição tiver uma resposta verdadeira ele vai transformar em falsa ou se a condição tiver uma resposta falsa ele vai tornar ela verdadeira. Basta testar:
 
-```text
+```javascript
 3 > 2
 ```
 
-```text
+```javascript
 ! 3 > 2
 ```
 
@@ -233,7 +233,7 @@ No nosso dia a dia também utilizamos bastante essas palavras, quase a todo mome
 
 Vamos tentar codificar em JavaScript essas condicionais em um código:
 
-```text
+```javascript
 estaChovendo = true
 temOnibus = false
 
@@ -273,7 +273,7 @@ Mas chega de bla-bla-bla e vamos a prática!
 
 Para definir uma função, temos:
 
-```text
+```javascript
  function funcaoSemParametros () { // escreva aqui dentro o seu código }
 
  // ou podemos escrever assim...
@@ -284,7 +284,7 @@ A palavra **function** é mais uma palavra reservada do JavaScript, com ela pode
 
 Então vamos transformar o exemplo do topico anterior em uma função:
 
-```text
+```javascript
  fuction irParaEscola (estaChovendo, temOnibus) {
    if (estaChovendo && !temOnibus) {
      console.log('não irei ao colégio pq nao tem onibus e está chovendo')
@@ -298,7 +298,7 @@ Então vamos transformar o exemplo do topico anterior em uma função:
 
 Agora que criamos a nossa função, podemos usa-la:
 
-```text
+```javascript
  irParaEscola( true, false )
 ```
 
@@ -306,7 +306,7 @@ Agora que criamos a nossa função, podemos usa-la:
 
 Toda linguagem de programação permite que o programador possa iterar ou repetir determinado bloco de código quantas vezes for necessário. Isso é feito muitas vezes através do **for**, o comando do "enquanto". Vamos dar uma olhada:
 
-```text
+```javascript
 for ( i = 0 ; i < 10 ; i++ ) {
  console.log(i + "º iteração.")
 }
@@ -319,7 +319,7 @@ for ( i = 0 ; i < 10 ; i++ ) {
 
 Antes de finalizarmos vamos analisar e revisar o seguinte código:
 
-```text
+```javascript
 crystalGems = ['Garnet', 'Pearl', 'Amethyst', 'Rose', 'Steven']
 tamanho = crystalGems.length
 
