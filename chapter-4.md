@@ -42,7 +42,7 @@ Nós escreveremos o código dentro do arquivo **main.js**, ele deve estar dentro
 
 Nele você deverá escrever o seguinte código:
 
-```text
+```javascript
 function preload () {}
 
 function create () {}
@@ -67,7 +67,7 @@ A função **principal** vocês verão no proximo tópico.
 
 Para iniciarmos um jogo precisamos informar algumas configurações básicas. O nosso framework exige que essas configurações sejam feitas para que ele possa entender o que você vai tentar implementar. Então vamos voltar ao código, olhando agora para a função **principal**:
 
-```text
+```javascript
 function principal () {
 
     var largura = ''
@@ -99,21 +99,21 @@ function principal () {
 
 Vamos começar a configurar o exemplo anterior alterando os valores, primeiro definiremos uma largura e uma altura para a nossa tela do jogo:
 
-```text
+```javascript
     var largura = 500
     var altura = 500
 ```
 
 Se você deseja que a tela do jogo seja o tamanho da tela da janela do seu navegador, ou seja, que ocupe toda a tela, você pode fazer assim:
 
-```text
+```javascript
     var largura = window.innerWidth
     var altura = window.innerHeight
 ```
 
 Agora, vamos definir uma cor para o fundo da tela do jogo, procure por **backgroundColor** no exemplo acima e adicione uma cor de sua preferencia:
 
-```text
+```javascript
   backgroundColor: '#b3e6ff'
 ```
 
@@ -121,7 +121,7 @@ As cores são em hexadecimal, você pode procurar uma cor nesse [link](https://h
 
 Por fim, vamos definir as nossas cenas **preload, create e update**. Por padrão o framework necessita que essas cenas sejam criadas e informadas na configuração. Então basta apenas adicionar a sua assinatura dessa forma:
 
-```text
+```javascript
     scene: {
         preload: preload,
         create: create,
@@ -135,7 +135,7 @@ Agora que ja temos o nosso jogo configurado, podemos visualizar no navegador com
 
 Como sabemos os jogos possuem vários recursos gráficos e sonoros, são esses recursos que melhoram a experiência do jogador. No nosso jogo não será diferente, dentro do diretório **assets/sprites** temos algumas imagens que vão nos acompanhar durante esse capitulo. Essas imagens são chamadas de [**sprites**](https://www.tecmundo.com.br/video-game-e-jogos/1044-o-que-sao-sprites-.htm). Agora vamos importar elas para o nosso jogo.
 
-```text
+```javascript
 // funcao de carregar as imagens e outros recursos
 const preload = function () {
 
@@ -148,9 +148,9 @@ const preload = function () {
 
 Vamos apenas comparar essas linhas de código e entender o que é cada coisa que estamos escrevendo:
 
-```text
-    this.load.atlas( identificacao-do-sprite , endereco-da-imagem, endereco-do-mapeamento-json)
-    this.load.atlas('hamtaro_atlas', 'assets/sprites/hamtaro/hamham.png', 'assets/sprites/maps/hamtaro.json')
+```javascript
+// this.load.atlas(identificacao-do-sprite, endereco-da-imagem, endereco-do-mapeamento-json)
+this.load.atlas('hamtaro_atlas', 'assets/sprites/hamtaro/hamham.png', 'assets/sprites/maps/hamtaro.json')
 ```
 
 `OBS: A primeira linha é um exemplo, a segunda linha é o nosso recurso importado anteriormente`
@@ -163,7 +163,7 @@ Vamos apenas comparar essas linhas de código e entender o que é cada coisa que
 
 Vamos adicionar algum elemento de texto na nossa tela, utilizando uma função do framework **add.text\(\)**:
 
-```text
+```javascript
 function create () {
 
     // Adiciona um texto para informar o score a jogadora
@@ -179,7 +179,7 @@ function create () {
 
 Assim como fizemos no exemplo anterior, vamos analisar o que está sendo feito:
 
-```text
+```javascript
     this.add.text( x , y , texto , configuracao )
 ```
 
@@ -197,7 +197,7 @@ Agora vamos para a parte mais divertida! Vamos adicionar o nosso personagem! Ain
 
 **OBS:** Para te orientar usaremos: **...** Isso significa que existe um código adicionado em uma etapa anterior.
 
-```text
+```javascript
 function create () {
 
     ...
@@ -210,7 +210,7 @@ function create () {
 
 Analisando o comando:
 
-```text
+```javascript
 this.physics.add.sprite( x , y , identificacao-do-sprite )
 ```
 
@@ -222,7 +222,7 @@ Já vimos nos exemplos anteriores o que cada uma dessas informações significam
 
 Percebemos que o sprite apareceu e logo em seguida sofreu um efeito de queda. Isso acontece devido as nossas configurações de jogo. No inicio desse capítulo fizemos algumas configurações, procure por esse bloco de código e altere o valor de **gravity: { y: 200 }** para **gravity: { y: 0 }**. Ficando assim:
 
-```text
+```javascript
     ...
 
         physics: {
@@ -243,7 +243,7 @@ Essa alteração remove a gravidade do mundo que criamos no nosso jogo.
 
 Já temos um personagem em jogo, agora precisamos movimentar ele de alguma forma. E podemos utilizar o teclado para fazer isso! O framework nos proporciona muitas facilidades e uma delas é o comando para capturar as teclas do nosso teclado. O **input.keyboard.createCursorKeys\(\)** nos retorna as teclas direcionais.
 
-```text
+```javascript
 function create () {
 
     ...
@@ -256,7 +256,7 @@ function create () {
 
 Uma vez que já temos essas teclas guardadas em uma variavel, vamos até a função de **update** para criar um comportamento no nosso personagem de acordo com a tecla que for usada. Veja:
 
-```text
+```javascript
 // funcao para atualizar o jogo
 function update () {
 
@@ -286,7 +286,7 @@ Para criar animações precisamos primeiro entender como está disposta a nossa 
 
 Você vai ver que algumas imagens são complementares, elas dão uma sensação de animação, e elas vão dar vida ao nosso personagem. Voltando a função **create**...
 
-```text
+```javascript
 function create () {
 
     ...
@@ -318,7 +318,7 @@ O **anims.generateFrameNames** cria esses frames para nós.
 Mas antes, abra o arquivo **assets/sprites/maps/hamtaro.json**.
 ```
 
-```text
+```javascript
 {
     "frames":{
         "hamtaro_1":{
@@ -356,7 +356,7 @@ Uma vez que a animação foi criada uma animação, podemos fazer uso da mesma.
 
 Volte para a função **update** e atualize para ficar dessa forma:
 
-```text
+```javascript
 function update () {
 
     if (cursors.left.isDown) {
@@ -384,7 +384,7 @@ Adicionamos a linha `hamtaro.anims.play('direita', true)`. Esse comando faz a an
 
 Chamamos de colisões o momento onde os elementos do jogo se encontram. Uma colisão pode encadear uma série de ações ou simplesmente impedir um personagem de ultrapassar um desafio. Para fazer os objetos se tocarem podemos usar o comando **physics.add.collider**, assim informamos para o framework quais elementos são passíveis de colisão, assim o jogo saberá que determinados objetos não podem ocupar o mesmo espaço ou acionarão algum evento. Segue o código:
 
-```text
+```javascript
 function create () {
 
     ...
@@ -406,7 +406,7 @@ Adicionamos um sprite novo e após isso informamos que o nosso personagem **hamt
 
 Agora vamos criar um evento que acontecerá sempre que o nosso personagem colidir com uma comida, adicione o seguinte código:
 
-```text
+```javascript
 function create () {
 
     ...
@@ -429,7 +429,7 @@ O **physics.add.overlap** faz a função de criar esse evento, sempre que o **ha
 
 Vamos implementar a funcionalidade que irá trocar a posição da comida na tela aleatóriamente
 
-```text
+```javascript
 function create () {
 
     ...
@@ -473,7 +473,7 @@ Criaremos uma lista de números e cada número representará uma dessas comidinh
 
 **OBS:** você pode ir em **assets/sprites/maps/food.json** e escolher outros números que estejam mapeados e adicionar a nossa lista.
 
-```text
+```javascript
 function create () {
 
     ...
@@ -499,7 +499,7 @@ function create () {
 
 O comando **random** que está no bloco a seguir vai nos retornar sempre um número aleatório que exista dentro de uma lista. Adicione essa função no inicio do arquivo **main.js**
 
-```text
+```javascript
 // Funcao para retornar um valor randomico em um array
 function random (array) { return array[Math.floor(Math.random() * array.length)] }
 ```
@@ -508,7 +508,7 @@ function random (array) { return array[Math.floor(Math.random() * array.length)]
 
 E por fim, vamos adicionar uma pontuação para cada comida que o personagem tocar.
 
-```text
+```javascript
 function create () {
 
     ...
