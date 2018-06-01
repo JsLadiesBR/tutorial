@@ -42,6 +42,8 @@ Nós escreveremos o código dentro do arquivo **main.js**, ele deve estar dentro
 
 Nele você deverá escrever o seguinte código:
 
+{% code-tabs %}
+{% code-tabs-item title="main.js" %}
 ```javascript
 function preload () {}
 
@@ -54,6 +56,8 @@ function principal () {}
 // Estamos adicionando uma função para o evento OnLoad da janela
 window.onload = principal
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 **preload, create, update** são as nossas cenas do jogo que serão criadas.
 
@@ -67,6 +71,8 @@ A função **principal** vocês verão no proximo tópico.
 
 Para iniciarmos um jogo precisamos informar algumas configurações básicas. O nosso framework exige que essas configurações sejam feitas para que ele possa entender o que você vai tentar implementar. Então vamos voltar ao código, olhando agora para a função **principal**:
 
+{% code-tabs %}
+{% code-tabs-item title="main.js" %}
 ```javascript
 function principal () {
 
@@ -96,20 +102,30 @@ function principal () {
     var game = Phaser.Game(conf)
 }
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 Vamos começar a configurar o exemplo anterior alterando os valores, primeiro definiremos uma largura e uma altura para a nossa tela do jogo:
 
+{% code-tabs %}
+{% code-tabs-item title="main.js" %}
 ```javascript
     var largura = 500
     var altura = 500
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 Se você deseja que a tela do jogo seja o tamanho da tela da janela do seu navegador, ou seja, que ocupe toda a tela, você pode fazer assim:
 
+{% code-tabs %}
+{% code-tabs-item title="main.js" %}
 ```javascript
     var largura = window.innerWidth
     var altura = window.innerHeight
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 Agora, vamos definir uma cor para o fundo da tela do jogo, procure por **backgroundColor** no exemplo acima e adicione uma cor de sua preferencia:
 
@@ -121,6 +137,8 @@ As cores são em hexadecimal, você pode procurar uma cor nesse [link](https://h
 
 Por fim, vamos definir as nossas cenas **preload, create e update**. Por padrão o framework necessita que essas cenas sejam criadas e informadas na configuração. Então basta apenas adicionar a sua assinatura dessa forma:
 
+{% code-tabs %}
+{% code-tabs-item title="main.js" %}
 ```javascript
     scene: {
         preload: preload,
@@ -128,6 +146,8 @@ Por fim, vamos definir as nossas cenas **preload, create e update**. Por padrão
         update: update
     }
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 Agora que ja temos o nosso jogo configurado, podemos visualizar no navegador como está ficando a primeira cara do jogo.
 
@@ -135,6 +155,8 @@ Agora que ja temos o nosso jogo configurado, podemos visualizar no navegador com
 
 Como sabemos os jogos possuem vários recursos gráficos e sonoros, são esses recursos que melhoram a experiência do jogador. No nosso jogo não será diferente, dentro do diretório **assets/sprites** temos algumas imagens que vão nos acompanhar durante esse capitulo. Essas imagens são chamadas de [**sprites**](https://www.tecmundo.com.br/video-game-e-jogos/1044-o-que-sao-sprites-.htm). Agora vamos importar elas para o nosso jogo.
 
+{% code-tabs %}
+{% code-tabs-item title="main.js" %}
 ```javascript
 // funcao de carregar as imagens e outros recursos
 const preload = function () {
@@ -145,13 +167,19 @@ const preload = function () {
 
 }
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 Vamos apenas comparar essas linhas de código e entender o que é cada coisa que estamos escrevendo:
 
+{% code-tabs %}
+{% code-tabs-item title="main.js" %}
 ```javascript
 // this.load.atlas(identificacao-do-sprite, endereco-da-imagem, endereco-do-mapeamento-json)
 this.load.atlas('hamtaro_atlas', 'assets/sprites/hamtaro/hamham.png', 'assets/sprites/maps/hamtaro.json')
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 `OBS: A primeira linha é um exemplo, a segunda linha é o nosso recurso importado anteriormente`
 
@@ -163,6 +191,8 @@ this.load.atlas('hamtaro_atlas', 'assets/sprites/hamtaro/hamham.png', 'assets/sp
 
 Vamos adicionar algum elemento de texto na nossa tela, utilizando uma função do framework **add.text\(\)**:
 
+{% code-tabs %}
+{% code-tabs-item title="main.js" %}
 ```javascript
 function create () {
 
@@ -176,6 +206,8 @@ function create () {
 
 }
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 Assim como fizemos no exemplo anterior, vamos analisar o que está sendo feito:
 
@@ -197,6 +229,8 @@ Agora vamos para a parte mais divertida! Vamos adicionar o nosso personagem! Ain
 
 **OBS:** Para te orientar usaremos: **...** Isso significa que existe um código adicionado em uma etapa anterior.
 
+{% code-tabs %}
+{% code-tabs-item title="main.js" %}
 ```javascript
 function create () {
 
@@ -207,6 +241,8 @@ function create () {
 
 }
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 Analisando o comando:
 
@@ -222,6 +258,8 @@ Já vimos nos exemplos anteriores o que cada uma dessas informações significam
 
 Percebemos que o sprite apareceu e logo em seguida sofreu um efeito de queda. Isso acontece devido as nossas configurações de jogo. No inicio desse capítulo fizemos algumas configurações, procure por esse bloco de código e altere o valor de **gravity: { y: 200 }** para **gravity: { y: 0 }**. Ficando assim:
 
+{% code-tabs %}
+{% code-tabs-item title="main.js" %}
 ```javascript
     ...
 
@@ -234,6 +272,8 @@ Percebemos que o sprite apareceu e logo em seguida sofreu um efeito de queda. Is
 
     ...
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 Essa alteração remove a gravidade do mundo que criamos no nosso jogo.
 
@@ -243,6 +283,8 @@ Essa alteração remove a gravidade do mundo que criamos no nosso jogo.
 
 Já temos um personagem em jogo, agora precisamos movimentar ele de alguma forma. E podemos utilizar o teclado para fazer isso! O framework nos proporciona muitas facilidades e uma delas é o comando para capturar as teclas do nosso teclado. O **input.keyboard.createCursorKeys\(\)** nos retorna as teclas direcionais.
 
+{% code-tabs %}
+{% code-tabs-item title="main.js" %}
 ```javascript
 function create () {
 
@@ -253,9 +295,13 @@ function create () {
 
 }
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 Uma vez que já temos essas teclas guardadas em uma variavel, vamos até a função de **update** para criar um comportamento no nosso personagem de acordo com a tecla que for usada. Veja:
 
+{% code-tabs %}
+{% code-tabs-item title="main.js" %}
 ```javascript
 // funcao para atualizar o jogo
 function update () {
@@ -273,6 +319,8 @@ function update () {
 
 }
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 * cursors.**left**, cursors.**right**, cursors.**up**, cursors.**down** são nossas teclas direcionais, respectivamente: esquerda, direita, cima e baixo.
 * cursors.left.**isDown** nos indica se a tecla foi acionada pela jogadora.
@@ -286,6 +334,8 @@ Para criar animações precisamos primeiro entender como está disposta a nossa 
 
 Você vai ver que algumas imagens são complementares, elas dão uma sensação de animação, e elas vão dar vida ao nosso personagem. Voltando a função **create**...
 
+{% code-tabs %}
+{% code-tabs-item title="main.js" %}
 ```javascript
 function create () {
 
@@ -305,6 +355,8 @@ function create () {
 
 }
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 O comando **anims.create** receber um parametro de configuração, onde poderemos definir com quais sprites da nossa imagem \(**hamham.png**\), nós iremos criar uma animação.
 
@@ -312,12 +364,8 @@ O comando **anims.create** receber um parametro de configuração, onde poderemo
 
 2\) Vamos definir os frames, cada frame é um sprite da imagem que queremos usar para montar a nossa animação.
 
-```text
-O **anims.generateFrameNames** cria esses frames para nós. 
-
-Mas antes, abra o arquivo **assets/sprites/maps/hamtaro.json**.
-```
-
+{% code-tabs %}
+{% code-tabs-item title="hamtaro.js" %}
 ```javascript
 {
     "frames":{
@@ -347,6 +395,8 @@ Mas antes, abra o arquivo **assets/sprites/maps/hamtaro.json**.
     }
 }
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 Essa é a aparencia do nosso **hamtaro.json**. Dentro desse arquivo existem todas as configurações que o comando **anims.generateFrameNames** precisa para identificar a imagem que precisamos. Passamos para o comando as seguintes informações: **prefix**, **start** e **end**. Isso quer dizer que na configuração passada no exemplo o comando está criando frames dos sprites **hamtaro\_1**, **hamtaro\_2** e **hamtaro\_3**
 
@@ -356,12 +406,15 @@ Uma vez que a animação foi criada uma animação, podemos fazer uso da mesma.
 
 Volte para a função **update** e atualize para ficar dessa forma:
 
+{% code-tabs %}
+{% code-tabs-item title="main.js" %}
 ```javascript
 function update () {
 
     if (cursors.left.isDown) {
         hamtaro.x -= 3
     } else if (cursors.right.isDown) {
+
         hamtaro.x += 3
 
         hamtaro.anims.play('direita', true)
@@ -373,6 +426,8 @@ function update () {
     }
 }
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 Adicionamos a linha `hamtaro.anims.play('direita', true)`. Esse comando faz a animação ser iniciada sempre que teclarmos o direcional para direita.
 
@@ -384,6 +439,8 @@ Adicionamos a linha `hamtaro.anims.play('direita', true)`. Esse comando faz a an
 
 Chamamos de colisões o momento onde os elementos do jogo se encontram. Uma colisão pode encadear uma série de ações ou simplesmente impedir um personagem de ultrapassar um desafio. Para fazer os objetos se tocarem podemos usar o comando **physics.add.collider**, assim informamos para o framework quais elementos são passíveis de colisão, assim o jogo saberá que determinados objetos não podem ocupar o mesmo espaço ou acionarão algum evento. Segue o código:
 
+{% code-tabs %}
+{% code-tabs-item title="main.js" %}
 ```javascript
 function create () {
 
@@ -397,6 +454,8 @@ function create () {
 
 }
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 Adicionamos um sprite novo e após isso informamos que o nosso personagem **hamtaro** vai colidir com a **comida**
 
