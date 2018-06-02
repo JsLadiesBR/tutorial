@@ -99,7 +99,7 @@ Vamos abrir agora esse arquivo com o seu com um editor de sua preferência \(Sub
     <head>
         <meta charset="utf-8">
         <title>Hamtaro - { JS Ladies }</title>
-        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="assets/main.css">
     </head>
 
     <body>
@@ -121,8 +121,8 @@ h1 {
   border: 1px solid black;
 }
 
-p {
-  color: yellow;
+small {
+  color: purple;
 }
 ```
 
