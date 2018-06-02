@@ -2,7 +2,7 @@
 
 ## Desenvolvendo um Jogo com JavaScript
 
-Vamos agora iniciar o desenvolvimento de um jogo simples usando alguns dos conceitos que aprendemos hoje. Preparamos para você um projeto pré-configurado com tudo que você vai presisar para construir e publicar seu jogo na internet.
+Vamos agora iniciar o desenvolvimento de um jogo simples usando alguns dos conceitos que aprendemos hoje. Preparamos para você um projeto pré-configurado com tudo que você vai precisar para construir e publicar seu jogo na internet.
 
 * [Projeto pré-configurado](https://github.com/JsLadiesBR/tutorial-hamtaro)
 
@@ -65,7 +65,7 @@ window.onload = principal
 * **create**: É a nossa segunda cena, aonde os elementos do jogo são configurados, essa cena é importante pois é nela que se encontra toda a lógica do jogo.
 * **update**: É a nossa terceira cena, nessa cena podemos sempre atualizar o estado do jogo, como por exemplo a movimentação dos personagens.
 
-A função **principal** vocês verão no proximo tópico.
+A função **principal** vocês verão no próximo tópico.
 
 ### Configurando o jogo
 
@@ -149,7 +149,7 @@ Por fim, vamos definir as nossas cenas **preload, create e update**. Por padrão
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-Agora que ja temos o nosso jogo configurado, podemos visualizar no navegador como está ficando a primeira cara do jogo.
+Agora que já temos o nosso jogo configurado, podemos visualizar no navegador como está ficando a primeira cara do jogo.
 
 ### Importando os recursos para o jogo
 
@@ -215,9 +215,9 @@ Assim como fizemos no exemplo anterior, vamos analisar o que está sendo feito:
     this.add.text( x , y , texto , configuracao )
 ```
 
-Chamamos de parametros todas essas informações que ficam separadas entre virgulas e entre parenteses. Os nossos parametros são:
+Chamamos de parâmetros todas essas informações que ficam separadas entre virgulas e entre parenteses. Os nossos parâmetros são:
 
-* **x** e **y**, que serão usados para determinar a posição que ficará o texto na tela. Usamos o plano cartesiano para orientar os elementos visuais na tela do computador. Então **x** e **y** esperam valores númericos e inteiros.
+* **x** e **y**, que serão usados para determinar a posição que ficará o texto na tela. Usamos o plano cartesiano para orientar os elementos visuais na tela do computador. Então **x** e **y** esperam valores numéricos e inteiros.
 * **texto**, é propriamente o texto que queremos escrever na tela
 * **configuração**, será todo o estilo que iremos aplicar no nosso texto. Podemos informar qual fonte \(_fontFamily_\) queremos usar, o seu tamanho \(_fontSize_\), o seu peso \(_fontWeight_\) e a cor \(_color_\)
 
@@ -227,7 +227,7 @@ Chamamos de parametros todas essas informações que ficam separadas entre virgu
 
 Agora vamos para a parte mais divertida! Vamos adicionar o nosso personagem! Ainda na função **create**, vamos adicionar mais algumas linhas de código.
 
-**OBS:** Para te orientar usaremos: **...** Isso significa que existe um código adicionado em uma etapa anterior.
+**OBS:** Para te orientar usaremos: **" ... "** Isso vai significar a existência um código que já foi adicionado em uma etapa anterior.
 
 {% code-tabs %}
 {% code-tabs-item title="main.js" %}
@@ -298,7 +298,7 @@ function create () {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-Uma vez que já temos essas teclas guardadas em uma variavel, vamos até a função de **update** para criar um comportamento no nosso personagem de acordo com a tecla que for usada. Veja:
+Uma vez que já temos essas teclas guardadas em uma variável, vamos até a função de **update** para criar um comportamento no nosso personagem de acordo com a tecla que for usada. Veja:
 
 {% code-tabs %}
 {% code-tabs-item title="main.js" %}
@@ -332,7 +332,7 @@ function update () {
 
 Para criar animações precisamos primeiro entender como está disposta a nossa imagem que contem os sprites do nosso personagem. Vamos abrir a imagem **assets/sprites/hamtaro/hamham.png** e verificar o que temos.
 
-Você vai ver que algumas imagens são complementares, elas dão uma sensação de animação, e elas vão dar vida ao nosso personagem. Voltando a função **create**...
+Você vai ver que algumas imagens são complementares, elas dão uma sensação de animação, e elas vão dar vida ao nosso personagem. Vamos voltar até função **create**...
 
 {% code-tabs %}
 {% code-tabs-item title="main.js" %}
@@ -358,13 +358,13 @@ function create () {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-O comando **anims.create** receber um parametro de configuração, onde poderemos definir com quais sprites da nossa imagem \(**hamham.png**\), nós iremos criar uma animação.
+O comando **anims.create** recebe um parâmetro de configuração, onde poderemos definir com quais sprites da nossa imagem \(**hamham.png**\), nós iremos criar uma animação.
 
 1\) Primeiro passo definimos um nome para essa animação **key: 'direita'**, o nome será **direita**. Vamos utilizar esse nome futuramente.
 
 2\) Vamos definir os frames, cada frame é um sprite da imagem que queremos usar para montar a nossa animação.
 
-O **anims.generateFrameNames** cria esses frames para nós. 
+O **anims.generateFrameNames** cria esses frames para nós.
 
 Mas antes, abra o arquivo **assets/sprites/maps/hamtaro.json**.
 
