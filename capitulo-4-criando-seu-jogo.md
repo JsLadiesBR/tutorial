@@ -576,11 +576,15 @@ function create () {
 
 O **physics.add.overlap** faz a função de criar esse evento, sempre que o **hamtaro** e a **comida** colidirem, uma rotina dentro desse escopo irá ser iniciada. Nós próximos passos iremos implementar:
 
-1\) A funcionalidade de mudar aleatoriamente a localização da comida na tela 2\) A funcionalidade de mudar o sprite da comida aleatoriamente 3\) A funcionalidade de adicionar pontos
+1\) A funcionalidade de mudar aleatoriamente a localização da comida na tela 
 
-#### Atualizando a posição do sprite do item
+2\) A funcionalidade de mudar o sprite da comida aleatoriamente 
 
-Vamos implementar a funcionalidade que irá trocar a posição da comida na tela aleatoriamente
+3\) A funcionalidade de adicionar pontos
+
+#### 1\) Atualizando a posição do sprite do item
+
+Vamos implementar a funcionalidade que irá trocar a posição da comida na tela aleatoriamente.
 
 ```javascript
 function create () {
@@ -606,7 +610,7 @@ O comando **randomNumber** que está no bloco a seguir vai nos retornar sempre u
 function randomNumber (start, end) { return Phaser.Math.Between(start, end) }
 ```
 
-#### Trocar o sprite
+#### 2\) Trocar o sprite
 
 Estamos quase lá! Agora iremos implementar a nossa segunda funcionalidade.
 
@@ -657,7 +661,7 @@ O comando **random** que está no bloco a seguir vai nos retornar sempre um núm
 function random (array) { return array[Math.floor(Math.random() * array.length)] }
 ```
 
-#### Adicionar pontuação
+#### 3\) Adicionar pontuação
 
 E por fim, vamos adicionar uma pontuação para cada comida que o personagem tocar.
 
