@@ -6,7 +6,7 @@ Agora que sabemos como a web funciona, vamos começar por a mão na massa? Uma p
 
 Agora vamos criar um arquivo html para ver na prática como ele funciona.
 
-Para inicar a construção do nosso projeto, pelo seu Terminal \(Linux ou MAC\) ou CMD \(Windows\) digite o seguinte comando:
+Para iniciar a construção do nosso projeto, pelo seu Terminal \(Linux ou MAC\) ou CMD \(Windows\) digite o seguinte comando:
 
 ```text
 mkdir tutorial-jsladies
@@ -20,7 +20,7 @@ cd tutorial-jsladies
 
 Esse comando acima nos leva para dentro da pasta.
 
-Agora que temos um local para inicar o nosso projeto, vamos criar nosso primeiro arquivo, para isso rode o seguinte comando:
+Agora que temos um local para iniciar o nosso projeto, vamos criar nosso primeiro arquivo, para isso rode o seguinte comando:
 
 ```text
 touch index.html
@@ -61,7 +61,7 @@ Com o arquivo aberto no editor, vamos começar a criar a estrutura do nosso site
 
 Abra agora o seu arquivo html no seu navegador, ele apareceu com algumas coisas que você escreveu no html, né? Então vamos explicar o porque...
 
-O html não é uma linguagem de programação e sim uma linguagem de marcação, e utilizamos as tags para avisar qual é o elemento que o nosso navegador deve redenrizar. As tags começam com &lt; e terminam com &gt;. Essas tags marcam os elementos.
+O html não é uma linguagem de programação e sim uma linguagem de marcação, e utilizamos as tags para avisar qual é o elemento que o nosso navegador deve renderizar. As tags começam com &lt; e terminam com &gt;. Essas tags marcam os elementos.
 
 A tag principal é a  ela deve ser colocada qualquer página da web e deve sempre encerrar a página com, as outras tags vão dentro dela, como é mostrado no código acima.
 
