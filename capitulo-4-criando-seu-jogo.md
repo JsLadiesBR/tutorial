@@ -408,6 +408,8 @@ Essa é a aparência do nosso **hamtaro.json**. Dentro desse arquivo existem tod
 
 Uma vez que a animação foi criada uma animação, podemos fazer uso da mesma.
 
+> O  ****[**Leshy SpriteSheet Tool**](https://www.leshylabs.com/apps/sstool/) é uma ferramenta online que pode te ajudar a criar o seu próprio arquivo                **json** para mapeamento de sprites. Basta você carregar a imagem para a área indicada e escolher um padrão de mapeamento. O nosso framework usa o padrão **JSON-TP-Array.**
+
 Volte para a função **update** e atualize para ficar dessa forma:
 
 {% code-tabs %}
