@@ -443,6 +443,8 @@ Adicionamos a linha `hamtaro.anims.play('direita', true)`. Esse comando faz a an
 
 **Tente criar as demais animações com base no que foi explicado nesse tópico**.
 
+Abaixo o resultado de como as animações devem ficar:
+
 {% tabs %}
 {% tab title="Direita" %}
 ```javascript
