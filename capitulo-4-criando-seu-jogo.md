@@ -36,6 +36,8 @@ Após a instalação das dependências, já podemos iniciar o servidor http, uti
 $ npm run dev
 ```
 
+Após o comando acesse: [http://localhost:8000](http://localhost:8000)
+
 ### Iniciando o jogo
 
 Nós escreveremos o código dentro do arquivo **main.js**, ele deve estar dentro do diretório **assets/js**
