@@ -20,7 +20,7 @@ cd tutorial-jsladies
 
 Esse comando acima nos leva para dentro da pasta.
 
-Agora que temos um local para iniciar o nosso projeto, vamos criar nosso primeiro arquivo, para isso rode o seguinte comando:
+Agora que temos um local para iniciar o nosso projeto, vamos criar nosso primeiro arquivo, para isso, rode o seguinte comando:
 
 ```text
 touch index.html
@@ -63,11 +63,11 @@ Abra agora o seu arquivo html no seu navegador, ele apareceu com algumas coisas 
 
 O html não é uma linguagem de programação e sim uma linguagem de marcação, e utilizamos as tags para avisar qual é o elemento que o nosso navegador deve renderizar. As tags começam com &lt; e terminam com &gt;. Essas tags marcam os elementos.
 
-A tag principal é a  ela deve ser colocada qualquer página da web e deve sempre encerrar a página com, as outras tags vão dentro dela, como é mostrado no código acima.
+A tag principal `<html>` deve ser colocada qualquer em página da web e deve-se sempre encerrar a página com `</html>`, as outras tags vão dentro dela, como é mostrado no código acima.
 
-A tag  é um elemento que contém informações sobre o documento que não são mostradas na tela e a tag  é um elemento que contém tudo o que é exibido como parte de uma página de um site.
+A tag `<head>` é um elemento que contém informações sobre o documento que não são mostradas na tela e a tag `<body>` é um elemento que contém tudo o que é exibido como parte de uma página de um site.
 
-Para ver mais tags e sua usagem indicamos o site com a lista a seguir: [https://developer.mozilla.org/pt-BR/docs/Web/HTML/HTML5/HTML5\_element\_list](https://developer.mozilla.org/pt-BR/docs/Web/HTML/HTML5/HTML5_element_list)
+Para ver mais tags e sua usagem indicamos o site com a lista a seguir: [https://developer.mozilla.org/pt-BR/docs/Web/HTML/HTML5/HTML5_element_list](https://developer.mozilla.org/pt-BR/docs/Web/HTML/HTML5/HTML5_element_list)
 
 ## CSS \(Cascading Stylesheets\)
 
@@ -91,7 +91,7 @@ Agora que temos a estrutura de onde fica arquivos css e js, vamos criar nosso pr
 touch main.css
 ```
 
-Vamos abrir agora esse arquivo com o seu com um editor de sua preferência \(Sublime, VSCode, Atom e etc...\) Com o arquivo aberto no editor, vamos adicionar o arquivo css no nosso arquivo html \(como é mostrado na linha 6\):
+Vamos abrir agora esse arquivo com o seu editor de sua preferência \(Sublime, VSCode, Atom e etc.\). Com o arquivo aberto no editor, vamos adicionar o arquivo css no nosso arquivo html \(como é mostrado na linha 6\):
 
 ```markup
 <!DOCTYPE html>
@@ -131,4 +131,3 @@ Abra agora o seu arquivo html no seu navegador, ele não está com cores diferen
 O css é um documento estruturado usando uma linguagem de marcação, no nosso caso o nosso html. Ele trabalha selecionando os elementos no seu html e aplicando as formatações que você desejar.
 
 Para ver mais sobre formatações com css o site a seguir: [https://developer.mozilla.org/pt-BR/docs/Aprender/CSS](https://developer.mozilla.org/pt-BR/docs/Aprender/CSS)
-
