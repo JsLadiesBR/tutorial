@@ -439,6 +439,88 @@ Adicionamos a linha `hamtaro.anims.play('direita', true)`. Esse comando faz a an
 
 **Tente criar as demais animações com base no que foi explicado nesse tópico**.
 
+{% tabs %}
+{% tab title="Direita" %}
+```javascript
+    // Cria as animações
+    this.anims.create({ 
+        key: 'direita', 
+        frames: this.anims.generateFrameNames('hamtaro_atlas', { 
+            prefix: 'hamtaro_', 
+            start: 1,
+            end: 3            
+        }),
+        repeat: -1,
+        duration: 300
+    });
+```
+{% endtab %}
+
+{% tab title="Esquerda" %}
+```javascript
+    // Cria as animações
+    this.anims.create({ 
+        key: 'esquerda', 
+        frames: this.anims.generateFrameNames('hamtaro_atlas', { 
+            prefix: 'hamtaro_', 
+            start: 4,
+            end: 6            
+        }),
+        repeat: -1,
+        duration: 300
+    });
+```
+{% endtab %}
+
+{% tab title="Cima" %}
+```javascript
+    // Cria as animações
+    this.anims.create({ 
+        key: 'cima', 
+        frames: this.anims.generateFrameNames('hamtaro_atlas', { 
+            prefix: 'hamtaro_', 
+            start: 7,
+            end: 8            
+        }),
+        repeat: -1,
+        duration: 300
+    });
+```
+{% endtab %}
+
+{% tab title="Baixo" %}
+```javascript
+    // Cria as animações
+    this.anims.create({ 
+        key: 'baixo', 
+        frames: this.anims.generateFrameNames('hamtaro_atlas', { 
+            prefix: 'hamtaro_', 
+            start: 9,
+            end: 10            
+        }),
+        repeat: -1,
+        duration: 300
+    });
+```
+{% endtab %}
+
+{% tab title="Parado" %}
+```javascript
+    // Cria as animações
+    this.anims.create({ 
+        key: 'parado', 
+        frames: this.anims.generateFrameNames('hamtaro_atlas', { 
+            prefix: 'hamtaro_', 
+            start: 11,
+            end: 12            
+        }),
+        repeat: -1,
+        duration: 300
+    });
+```
+{% endtab %}
+{% endtabs %}
+
 **Após adicionar as novas linhas salve as alterações e atualize o seu navegador, veja o que aconteceu**
 
 ### Criando colisões
