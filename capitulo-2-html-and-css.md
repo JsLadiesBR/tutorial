@@ -22,11 +22,19 @@ Esse comando acima nos leva para dentro da pasta.
 
 Agora que temos um local para iniciar o nosso projeto, vamos criar nosso primeiro arquivo, para isso, rode o seguinte comando:
 
+Terminal \(Linux ou MAC\)
+
 ```text
 touch index.html
 ```
 
-Esse comando acima criou um arquivo html.
+CMD \(Windows\):
+
+```text
+echo > index.html
+```
+
+Esses comandos acima podem criar um arquivo html.
 
 Vamos abrir agora esse arquivo com o seu com um editor de sua preferência \(Sublime, VSCode, Atom e etc...\) Caso você não saiba onde você criou o arquivo você pode pelo seu Terminal \(Linux ou MAC\)/cmd \(Windows\) descobrir onde você está digitando o seguinte comando:
 
@@ -67,7 +75,7 @@ A tag principal `<html>` deve ser colocada qualquer em página da web e deve-se 
 
 A tag `<head>` é um elemento que contém informações sobre o documento que não são mostradas na tela e a tag `<body>` é um elemento que contém tudo o que é exibido como parte de uma página de um site.
 
-Para ver mais tags e sua usagem indicamos o site com a lista a seguir: [https://developer.mozilla.org/pt-BR/docs/Web/HTML/HTML5/HTML5_element_list](https://developer.mozilla.org/pt-BR/docs/Web/HTML/HTML5/HTML5_element_list)
+Para ver mais tags e sua usagem indicamos o site com a lista a seguir: [https://developer.mozilla.org/pt-BR/docs/Web/HTML/HTML5/HTML5\_element\_list](https://developer.mozilla.org/pt-BR/docs/Web/HTML/HTML5/HTML5_element_list)
 
 ## CSS \(Cascading Stylesheets\)
 
@@ -131,3 +139,4 @@ Abra agora o seu arquivo html no seu navegador, ele não está com cores diferen
 O css é um documento estruturado usando uma linguagem de marcação, no nosso caso o nosso html. Ele trabalha selecionando os elementos no seu html e aplicando as formatações que você desejar.
 
 Para ver mais sobre formatações com css o site a seguir: [https://developer.mozilla.org/pt-BR/docs/Aprender/CSS](https://developer.mozilla.org/pt-BR/docs/Aprender/CSS)
+

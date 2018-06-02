@@ -5,3 +5,4 @@ A web é uma rede mundial de computadores. Em outras palavras, é um sistema de 
 Quando você acessa algum conteúdo na Internet por meio de um navegador, na verdade você está acessando uma página na web. Páginas web são arquivos que podem possuir imagens, vídeos, códigos e muitas outras coisas, e ficam armazenadas em um servidor web, que nada mais é do que um computador que serve justamente para hospedá-los. Um conjunto de páginas web é conhecido como site e um conjunto de sites formam a web.
 
 Neste tutorial, vamos aprender a criar uma página web, porque é nela que faremos o nosso jogo funcionar!
+
