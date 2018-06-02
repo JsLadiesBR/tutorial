@@ -99,7 +99,7 @@ function principal () {
         }
     }
 
-    var game = Phaser.Game(conf)
+    var game = new Phaser.Game(conf)
 }
 ```
 {% endcode-tabs-item %}
