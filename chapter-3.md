@@ -285,7 +285,7 @@ A palavra **function** é mais uma palavra reservada do JavaScript, com ela pode
 Então vamos transformar o exemplo do topico anterior em uma função:
 
 ```javascript
- fuction irParaEscola (estaChovendo, temOnibus) {
+ function irParaEscola (estaChovendo, temOnibus) {
    if (estaChovendo && !temOnibus) {
      console.log('não irei ao colégio pq nao tem onibus e está chovendo')
    } else if (temOnibus) {
