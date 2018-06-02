@@ -161,7 +161,7 @@ Como sabemos os jogos possuem vários recursos gráficos e sonoros, são esses r
 {% code-tabs-item title="main.js" %}
 ```javascript
 // funcao de carregar as imagens e outros recursos
-const preload = function () {
+function preload () {
 
     // Carrega os recursos de imagens para o jogo
     this.load.atlas('hamtaro_atlas', 'assets/sprites/hamtaro/hamham.png', 'assets/sprites/maps/hamtaro.json')
