@@ -330,7 +330,9 @@ function update () {
 
 ### Criando animações
 
-Para criar animações precisamos primeiro entender como está disposta a nossa imagem que contem os sprites do nosso personagem. Vamos abrir a imagem **assets/sprites/hamtaro/hamham.png** e verificar o que temos.
+Para criar animações precisamos primeiro entender como está disposta a nossa imagem que contem os sprites do nosso personagem. Vamos abrir a imagem **assets/sprites/hamtaro/hamham.png** e verificar o que temos:
+
+![hamham.png](.gitbook/assets/hamham.png)
 
 Você vai ver que algumas imagens são complementares, elas dão uma sensação de animação, e elas vão dar vida ao nosso personagem. Vamos voltar até função **create**...
 
