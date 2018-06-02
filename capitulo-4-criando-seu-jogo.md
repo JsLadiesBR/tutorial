@@ -402,7 +402,7 @@ Mas antes, abra o arquivo **assets/sprites/maps/hamtaro.json**.
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-Essa é a aparencia do nosso **hamtaro.json**. Dentro desse arquivo existem todas as configurações que o comando **anims.generateFrameNames** precisa para identificar a imagem que precisamos. Passamos para o comando as seguintes informações: **prefix**, **start** e **end**. Isso quer dizer que na configuração passada no exemplo o comando está criando frames dos sprites **hamtaro\_1**, **hamtaro\_2** e **hamtaro\_3**
+Essa é a aparência do nosso **hamtaro.json**. Dentro desse arquivo existem todas as configurações que o comando **anims.generateFrameNames** precisa para identificar a imagem que precisamos. Passamos para o comando as seguintes informações: **prefix**, **start** e **end**. Isso quer dizer que na configuração passada no exemplo o comando está criando frames dos sprites **hamtaro\_1**, **hamtaro\_2** e **hamtaro\_3**
 
 3\) **repeat** e **duration**, o valor **-1** em repeat significa que a animação será infinita e a duração de 300ms
 
@@ -474,7 +474,7 @@ function create () {
 
     ...
 
-    // Cria o evento que acontecera quando o hamtaro colidir com uma comida
+    // Cria o evento que acontecerá quando o hamtaro colidir com uma comida
     this.physics.add.overlap(hamtaro, comida, function(){
 
         // vamos implementar uma logica para essa colisãoo!
@@ -486,11 +486,11 @@ function create () {
 
 O **physics.add.overlap** faz a função de criar esse evento, sempre que o **hamtaro** e a **comida** colidirem, uma rotina dentro desse escopo irá ser iniciada. Nós próximos passos iremos implementar:
 
-1\) A funcionalidade de mudar aleatóriamente a localizacao da comida na tela 2\) A funcionalidade de mudar o sprite da comida aleatóriamente 3\) A funcionalidade de adicionar pontos
+1\) A funcionalidade de mudar aleatoriamente a localização da comida na tela 2\) A funcionalidade de mudar o sprite da comida aleatoriamente 3\) A funcionalidade de adicionar pontos
 
 #### Atualizando a posição do sprite do item
 
-Vamos implementar a funcionalidade que irá trocar a posição da comida na tela aleatóriamente
+Vamos implementar a funcionalidade que irá trocar a posição da comida na tela aleatoriamente
 
 ```javascript
 function create () {
