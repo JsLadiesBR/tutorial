@@ -2,13 +2,13 @@
 
 ## Introdução ao JavaScript
 
-JavaScript é uma linguagem de programação que permite a você implementar itens complexos em páginas web — toda vez que uma página da web faz mais do que simplesmente mostrar a você informação estática — mostrando conteúdo que se atualiza em um intervalo de tempo, mapas interativos ou gráficos 2D/3D animados, etc. — você pode apostar que o JavaScript provavelmente está envolvido.
+JavaScript é uma linguagem de programação que permite a você implementar itens complexos em páginas web — toda a vez que uma página da web faz mais do que simplesmente mostrar a você informação estática — mostrando conteúdo que se atualiza em um intervalo de tempo, mapas interativos ou gráficos 2D/3D animados, etc. — você pode apostar que o JavaScript provavelmente está envolvido.
 
 ### Meu primeiro comando com JavaScript!
 
-Abra seu navegador \(Google Chrome\) e busque pela ferramenta de desenvolvimento \(tecle **F12**\). Busque pela aba **console**, é nessa aba que seguiremos com o nosso tutorial.
+Abra o seu navegador \(Google Chrome\) e busque pela ferramenta de desenvolvimento \(tecle **F12**\). Busque pela aba **console**, é nessa aba que seguiremos com o nosso tutorial.
 
-Dentro do console é possível executar qualquer código JavaScript, então vamos começar por um bem básico
+Dentro do console é possível executar qualquer código JavaScript, então vamos começar por um bem básico.
 
 Digite no seu console a seguinte operação:
 
@@ -34,7 +34,7 @@ Como você pode ver as operações matemáticas podem ser compreendidas e calcul
 
 ### Conhecendo uma String!
 
-String é uma sequencia de caracteres, você pode criar sua primeira string da seguinte forma:
+String é uma sequência de caracteres, você pode criar a sua primeira string da seguinte forma:
 
 ```javascript
 "JS Ladies!"
@@ -76,7 +76,7 @@ caixa4 = 3 * 4
 caixa5 = true
 ```
 
-Criamos 3 variáveis, cada uma está guardando um valor graças ao simbolo do `=`, que tem como função atribuir valores a uma variável.
+Criamos 3 variáveis, cada uma está guardando um valor graças ao símbolo `=`, que tem como função atribuir valores a uma variável.
 
 ### Listas ou Arrays
 
@@ -91,7 +91,7 @@ E assim teremos uma lista vazia chamada `numeros`.
 As listas são usadas para guardar vários valores, agrupados, geralmente com alguma afinidade ou propósito. Vamos supor que você tenha uma lista de produtos que deseja comprar no mercado. Para representar essa lista de produtos no JavaScript seria assim:
 
 ```javascript
-produtos = ['abacaxi', 'laranja', 'feijão', 'maionese', 'açucar']
+produtos = ['abacaxi', 'laranja', 'feijão', 'maionese', 'açúcar']
 ```
 
 Podemos fazer uma série de coisas com uma lista, assim como nas strings também conseguimos ver o tamanho de uma lista
@@ -108,7 +108,7 @@ Também podemos ordenar de forma alfabética a nossa lista através desse comand
 produtos.sort()
 ```
 
-E o retorno será: `< ["abacaxi", "açucar", "feijão", "laranja", "maionese"]`
+E o retorno será: `< ["abacaxi", "açúcar", "feijão", "laranja", "maionese"]`
 
 E se quisermos ordenar ela de forma inversa, podemos usar esse comando:
 
@@ -119,7 +119,7 @@ produtos.reverse()
 E teremos:
 
 ```javascript
-["maionese", "laranja", "feijão", "açucar", "abacaxi"]
+["maionese", "laranja", "feijão", "açúcar", "abacaxi"]
 ```
 
 E se quisermos adicionar um novo produto na nossa lista? Podemos fazer dessa forma:
@@ -131,7 +131,7 @@ produtos.push('café')
 Como fizemos um comando de inverter os elementos da nossa lista anteriormente, o resultado após a adição do novo produto fica sendo:
 
 ```javascript
-["maionese", "laranja", "feijão", "açucar", "abacaxi", "café"]
+["maionese", "laranja", "feijão", "açúcar", "abacaxi", "café"]
 ```
 
 O comando push adiciona sempre um novo elemento no final de uma lista.
@@ -257,7 +257,7 @@ Tente trocar os valores das variáveis **estaChovendo** e **temOnibus** e veja c
 
 ## Funções
 
-Antes de falarmos sobre funções, quantas vezes você precisou repetir o código do exemplo anterior para verificar todas possibilidades? Se você testou todas elas, acredito que precisou copiar e colar o mesmo código várias vezes. Isso ficou enorme ou confuso?
+Antes de falarmos sobre funções, quantas vezes você precisou repetir o código do exemplo anterior para verificar todas as possibilidades? Se você testou todas elas, acredito que precisou copiar e colar o mesmo código, várias vezes. Isso ficou enorme ou confuso?
 
 As funções podem te ajudar nesse caso!
 
@@ -269,7 +269,7 @@ Mas você deve estar se perguntando: "Como isso é possível?"
 
 As funções são utilizadas para encapsular pequenas funcionalidades e garantir que o programador possa fazer o reuso de código.
 
-Mas chega de bla-bla-bla e vamos a prática!
+Mas chega de bla-bla-bla e vamos à prática!
 
 Para definir uma função, temos:
 
