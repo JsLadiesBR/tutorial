@@ -8,7 +8,7 @@ JavaScript é uma linguagem de programação que permite a você implementar ite
 
 Abra seu navegador \(Google Chrome\) e busque pela ferramenta de desenvolvimento \(tecle **F12**\). Busque pela aba **console**, é nessa aba que seguiremos com o nosso tutorial.
 
-Dentro do console é possivel executar qualquer código JavaScript, então vamos começar por um bem básico
+Dentro do console é possível executar qualquer código JavaScript, então vamos começar por um bem básico
 
 Digite no seu console a seguinte operação:
 
@@ -54,7 +54,7 @@ O tamanho da string condiz com a quantidade de caracteres que existe entre as as
 
 ### Variáveis! As caixinhas que guardam informações!
 
-Uma variável na programação representa um espaço na memória do computador que pode ser usado para guardar informações. Podemos fazer uma abstração sobre isso! Imagine que uma variável é uma caixa, nós temos diversas caixas para propositos diferentes, algumas guardam sapatos, outras guardam brinquedos e por aí vai. Vamos representar nossa abstração em forma de código.
+Uma variável na programação representa um espaço na memória do computador que pode ser usado para guardar informações. Podemos fazer uma abstração sobre isso! Imagine que uma variável é uma caixa, nós temos diversas caixas para propósitos diferentes, algumas guardam sapatos, outras guardam brinquedos e por aí vai. Vamos representar nossa abstração em forma de código.
 
 ```javascript
 caixa1 = "sapatos"
@@ -102,7 +102,7 @@ produtos.length
 
 O retorno desse comando será: `5`
 
-Também podemos ordenar de forma alfabética a nossa lista atraves desse comando:
+Também podemos ordenar de forma alfabética a nossa lista através desse comando:
 
 ```javascript
 produtos.sort()
@@ -138,7 +138,7 @@ O comando push adiciona sempre um novo elemento no final de uma lista.
 
 ## Comparando coisas
 
-Na programação a comparação é algo essencial. Então vamos começar por comparação de números. Faça as seguintes comparaçes:
+Na programação a comparação é algo essencial. Então vamos começar por comparação de números. Faça as seguintes comparações:
 
 ```javascript
 5 > 6
@@ -228,7 +228,7 @@ Anteriormente vimos como criar comparações entre valores, agora vamos aprofund
 No nosso dia a dia também utilizamos bastante essas palavras, quase a todo momento estamos condicionando algo, por exemplo:
 
 * **se** chover não irei ao colégio
-* **se não** chover e **se** houver onibus, irei ao colégio
+* **se não** chover e **se** houver ônibus, irei ao colégio
 * **se não** chover irei ao colégio
 
 Vamos tentar codificar em JavaScript essas condicionais em um código:
@@ -280,9 +280,9 @@ Para definir uma função, temos:
  function funcaoComParametros (parametros) { // escreva aqui dentro o seu código }
 ```
 
-A palavra **function** é mais uma palavra reservada do JavaScript, com ela podemos declarar uma função. Em seguida vem o nome que queremos dar a nossa função \(**funcaoSemParametros**\), seguido do nome temos por obrigação os parenteses `()` que indicam o que podemos passar para dentro do escopo dessa função e por fim as chaves `{ }` que vão delimitar a àrea/escopo da função.
+A palavra **function** é mais uma palavra reservada do JavaScript, com ela podemos declarar uma função. Em seguida vem o nome que queremos dar a nossa função \(**funcaoSemParametros**\), seguido do nome temos por obrigação os parenteses `()` que indicam o que podemos passar para dentro do escopo dessa função e por fim as chaves `{ }` que vão delimitar a área/escopo da função.
 
-Então vamos transformar o exemplo do topico anterior em uma função:
+Então vamos transformar o exemplo do tópico anterior em uma função:
 
 ```javascript
  fuction irParaEscola (estaChovendo, temOnibus) {
@@ -312,10 +312,10 @@ for ( i = 0 ; i < 10 ; i++ ) {
 }
 ```
 
-* **for** é a nossa palavra reservada e com ela podemos iniciar um laço apartir da condição que virá dentro do `()`
-* **i = 0** é o parametro inicial
+* **for** é a nossa palavra reservada e com ela podemos iniciar um laço a partir da condição que virá dentro do `()`
+* **i = 0** é o parâmetro inicial
 * **i &lt; 10** é a condição para finalizar a repetição do laço
-* E por fim o **i++** que é o parametro que incrementará mais 1 ao valor da variavel **i**
+* E por fim o **i++** que é o parâmetro que incrementará mais 1 ao valor da variável **i**
 
 Antes de finalizarmos vamos analisar e revisar o seguinte código:
 
@@ -332,7 +332,7 @@ for (i = 0; i < tamanho ; i++) {
 }
 ```
 
-Chegamos ao final da nossa breve introdução ao JavaScript, existe muito mais assunto para ser visto do que esses tópicos desse artigo. Mas não desanime! Esses tópicos são o suficiente e te ajudarão a construir nosso projeto de jogo no próximo cápitulo!
+Chegamos ao final da nossa breve introdução ao JavaScript, existe muito mais assunto para ser visto do que esses tópicos desse artigo. Mas não desanime! Esses tópicos são o suficiente e te ajudarão a construir nosso projeto de jogo no próximo capitulo!
 
 ## Referências
 
