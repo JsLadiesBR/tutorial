@@ -18,10 +18,6 @@ O código final se encontra nesse link:
 
 ### Criando e configurando o ambiente
 
-#### Instalação do Node.js
-
-Para instalar o nodejs você pode consultar a página oficial e escolher a sua plataforma [`aqui`](https://nodejs.org/en/download/package-manager/).
-
 #### Instalação do projeto
 
 Uma vez que você já tem o **nodejs** instalado e já baixou o **projeto pré-configurado**, já podemos iniciar a instalação das dependências do projeto, para isso, abra o terminal no diretório do **projeto pré-configurado** e digite o comando:
