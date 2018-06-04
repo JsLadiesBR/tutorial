@@ -4,6 +4,14 @@
 
 JavaScript é uma linguagem de programação que permite a você implementar itens complexos em páginas web — toda a vez que uma página da web faz mais do que simplesmente mostrar a você informação estática — mostrando conteúdo que se atualiza em um intervalo de tempo, mapas interativos ou gráficos 2D/3D animados, etc. — você pode apostar que o JavaScript provavelmente está envolvido.
 
+Hoje em dia temos uma gama de bibliotecas e frameworks escritas em JavaScript, muitas funcionam no lado cliente \(No navegador\), e outras funcionam no lado do servidor. Para o JavaScript ser compreendido por máquinas que servem, ou seja, em servidores é necessário que esse computador tenha instalado o Node.js.
+
+O Node.js é uma plataforma que te permite escrever aplicações JavaScript no lado do servidor. Vamos utilizar o Node.js no próximo capitulo, então faça a instalação caso não o tenha já instalado:
+
+#### Instalação do Node.js
+
+Para instalar o nodejs você pode consultar a página oficial e escolher a sua plataforma [`aqui`](https://nodejs.org/en/download/package-manager/).
+
 ### Meu primeiro comando com JavaScript!
 
 Abra o seu navegador \(Google Chrome\) e busque pela ferramenta de desenvolvimento \(tecle **F12**\). Busque pela aba **console**, é nessa aba que seguiremos com o nosso tutorial.
