@@ -24,7 +24,6 @@ const addPlayer = (self, player) => {
 }
 
 const addOtherPlayers = (self, player) => {
-    console.log(player)
     const otherPlayer = self.physics.add.sprite(player.x, player.y, 'hamtaro_atlas')
     otherPlayer.playerId = player.playerId
     self.otherPlayers.add(otherPlayer)

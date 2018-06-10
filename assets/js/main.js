@@ -18,6 +18,7 @@ const preload = function () {
 const create = function () {
 
     self = this
+    this.playertest = new Player(this, 500,50)
     this.hamtaro
     this.otherPlayers = this.physics.add.group()
     this.socket = io('http://localhost:8081')
@@ -50,69 +51,7 @@ const create = function () {
     })
 
     // Cria as animações
-    this.anims.create({ 
-        key: 'direita', 
-        frames: this.anims.generateFrameNames('hamtaro_atlas', { 
-            prefix: 'hamtaro_', 
-            end: 3, 
-            start: 1
-        }),
-        repeat: -1,
-        duration: 300
-    });
-
-    this.anims.create({ 
-        key: 'esquerda', 
-        frames: this.anims.generateFrameNames('hamtaro_atlas', { 
-            prefix: 'hamtaro_', 
-            end: 6, 
-            start: 4
-        }),
-        repeat: -1,
-        duration: 300
-    });
-
-    this.anims.create({ 
-        key: 'cima', 
-        frames: this.anims.generateFrameNames('hamtaro_atlas', { 
-            prefix: 'hamtaro_', 
-            end: 8, 
-            start: 7
-        }),
-        repeat: -1,
-        duration: 300
-    });
-
-    this.anims.create({ 
-        key: 'baixo', 
-        frames: this.anims.generateFrameNames('hamtaro_atlas', { 
-            prefix: 'hamtaro_', 
-            end: 10, 
-            start: 9
-        }),
-        repeat: -1,
-        duration: 300
-    });
-
-    this.anims.create({ 
-        key: 'normal', 
-        frames: this.anims.generateFrameNames('hamtaro_atlas', { 
-            prefix: 'hamtaro_', 
-            end: 12, 
-            start: 11
-        }),
-        repeat: -1,
-        duration: 300
-    });
-
-    this.anims.create({ 
-        key: 'comer', 
-        frames: this.anims.generateFrameNames('hamtaro_atlas', { 
-            prefix: 'hamtaro_', 
-            end: 12, 
-            start: 11
-        })
-    });
+    createAnimations(this, animations)
 
     // eixo x e y sendo definidos aleatoriamente
     let x = randomNumber(50, window.innerWidth - 50)
